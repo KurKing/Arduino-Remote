@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2872BD6EF0800B0890E /* AppDelegate.swift */; };
+		491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2892BD6EF0800B0890E /* SceneDelegate.swift */; };
+		491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD28B2BD6EF0800B0890E /* ViewController.swift */; };
+		491AD28F2BD6EF0800B0890E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491AD28D2BD6EF0800B0890E /* Main.storyboard */; };
+		491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2902BD6EF0900B0890E /* Assets.xcassets */; };
+		491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */; };
+		491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */; };
+		491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */; };
+		491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		491AD29B2BD6EF0900B0890E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 491AD27C2BD6EF0800B0890E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491AD2832BD6EF0800B0890E;
+			remoteInfo = "Arduino Remote";
+		};
+		491AD2A52BD6EF0900B0890E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 491AD27C2BD6EF0800B0890E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 491AD2832BD6EF0800B0890E;
+			remoteInfo = "Arduino Remote";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		491AD2842BD6EF0800B0890E /* Arduino Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491AD2872BD6EF0800B0890E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		491AD2892BD6EF0800B0890E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		491AD28B2BD6EF0800B0890E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		491AD28E2BD6EF0800B0890E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		491AD2902BD6EF0900B0890E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		491AD2932BD6EF0900B0890E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		491AD2952BD6EF0900B0890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		491AD29A2BD6EF0900B0890E /* Arduino RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteTests.swift; sourceTree = "<group>"; };
+		491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITests.swift; sourceTree = "<group>"; };
+		491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		491AD2812BD6EF0800B0890E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2972BD6EF0900B0890E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2A12BD6EF0900B0890E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		491AD27B2BD6EF0800B0890E = {
+			isa = PBXGroup;
+			children = (
+				491AD2862BD6EF0800B0890E /* Arduino Remote */,
+				491AD29D2BD6EF0900B0890E /* Arduino RemoteTests */,
+				491AD2A72BD6EF0900B0890E /* Arduino RemoteUITests */,
+				491AD2852BD6EF0800B0890E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		491AD2852BD6EF0800B0890E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				491AD2842BD6EF0800B0890E /* Arduino Remote.app */,
+				491AD29A2BD6EF0900B0890E /* Arduino RemoteTests.xctest */,
+				491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		491AD2862BD6EF0800B0890E /* Arduino Remote */ = {
+			isa = PBXGroup;
+			children = (
+				491AD2872BD6EF0800B0890E /* AppDelegate.swift */,
+				491AD2892BD6EF0800B0890E /* SceneDelegate.swift */,
+				491AD28B2BD6EF0800B0890E /* ViewController.swift */,
+				491AD28D2BD6EF0800B0890E /* Main.storyboard */,
+				491AD2902BD6EF0900B0890E /* Assets.xcassets */,
+				491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */,
+				491AD2952BD6EF0900B0890E /* Info.plist */,
+			);
+			path = "Arduino Remote";
+			sourceTree = "<group>";
+		};
+		491AD29D2BD6EF0900B0890E /* Arduino RemoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */,
+			);
+			path = "Arduino RemoteTests";
+			sourceTree = "<group>";
+		};
+		491AD2A72BD6EF0900B0890E /* Arduino RemoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */,
+				491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */,
+			);
+			path = "Arduino RemoteUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		491AD2832BD6EF0800B0890E /* Arduino Remote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491AD2AE2BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino Remote" */;
+			buildPhases = (
+				491AD2802BD6EF0800B0890E /* Sources */,
+				491AD2812BD6EF0800B0890E /* Frameworks */,
+				491AD2822BD6EF0800B0890E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Arduino Remote";
+			productName = "Arduino Remote";
+			productReference = 491AD2842BD6EF0800B0890E /* Arduino Remote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		491AD2992BD6EF0900B0890E /* Arduino RemoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491AD2B12BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino RemoteTests" */;
+			buildPhases = (
+				491AD2962BD6EF0900B0890E /* Sources */,
+				491AD2972BD6EF0900B0890E /* Frameworks */,
+				491AD2982BD6EF0900B0890E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				491AD29C2BD6EF0900B0890E /* PBXTargetDependency */,
+			);
+			name = "Arduino RemoteTests";
+			productName = "Arduino RemoteTests";
+			productReference = 491AD29A2BD6EF0900B0890E /* Arduino RemoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		491AD2A32BD6EF0900B0890E /* Arduino RemoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 491AD2B42BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino RemoteUITests" */;
+			buildPhases = (
+				491AD2A02BD6EF0900B0890E /* Sources */,
+				491AD2A12BD6EF0900B0890E /* Frameworks */,
+				491AD2A22BD6EF0900B0890E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				491AD2A62BD6EF0900B0890E /* PBXTargetDependency */,
+			);
+			name = "Arduino RemoteUITests";
+			productName = "Arduino RemoteUITests";
+			productReference = 491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		491AD27C2BD6EF0800B0890E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					491AD2832BD6EF0800B0890E = {
+						CreatedOnToolsVersion = 15.0.1;
+					};
+					491AD2992BD6EF0900B0890E = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 491AD2832BD6EF0800B0890E;
+					};
+					491AD2A32BD6EF0900B0890E = {
+						CreatedOnToolsVersion = 15.0.1;
+						TestTargetID = 491AD2832BD6EF0800B0890E;
+					};
+				};
+			};
+			buildConfigurationList = 491AD27F2BD6EF0800B0890E /* Build configuration list for PBXProject "Arduino Remote" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 491AD27B2BD6EF0800B0890E;
+			productRefGroup = 491AD2852BD6EF0800B0890E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				491AD2832BD6EF0800B0890E /* Arduino Remote */,
+				491AD2992BD6EF0900B0890E /* Arduino RemoteTests */,
+				491AD2A32BD6EF0900B0890E /* Arduino RemoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		491AD2822BD6EF0800B0890E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */,
+				491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */,
+				491AD28F2BD6EF0800B0890E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2982BD6EF0900B0890E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2A22BD6EF0900B0890E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		491AD2802BD6EF0800B0890E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
+				491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */,
+				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2962BD6EF0900B0890E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		491AD2A02BD6EF0900B0890E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */,
+				491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		491AD29C2BD6EF0900B0890E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491AD2832BD6EF0800B0890E /* Arduino Remote */;
+			targetProxy = 491AD29B2BD6EF0900B0890E /* PBXContainerItemProxy */;
+		};
+		491AD2A62BD6EF0900B0890E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 491AD2832BD6EF0800B0890E /* Arduino Remote */;
+			targetProxy = 491AD2A52BD6EF0900B0890E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		491AD28D2BD6EF0800B0890E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491AD28E2BD6EF0800B0890E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491AD2932BD6EF0900B0890E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		491AD2AC2BD6EF0900B0890E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		491AD2AD2BD6EF0900B0890E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		491AD2AF2BD6EF0900B0890E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Arduino Remote/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		491AD2B02BD6EF0900B0890E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Arduino Remote/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-Remote";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		491AD2B22BD6EF0900B0890E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-RemoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arduino Remote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Arduino Remote";
+			};
+			name = Debug;
+		};
+		491AD2B32BD6EF0900B0890E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-RemoteTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Arduino Remote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Arduino Remote";
+			};
+			name = Release;
+		};
+		491AD2B52BD6EF0900B0890E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-RemoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Arduino Remote";
+			};
+			name = Debug;
+		};
+		491AD2B62BD6EF0900B0890E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WG482W7ASB;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.kurking.Arduino-RemoteUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Arduino Remote";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		491AD27F2BD6EF0800B0890E /* Build configuration list for PBXProject "Arduino Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491AD2AC2BD6EF0900B0890E /* Debug */,
+				491AD2AD2BD6EF0900B0890E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491AD2AE2BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino Remote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491AD2AF2BD6EF0900B0890E /* Debug */,
+				491AD2B02BD6EF0900B0890E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491AD2B12BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino RemoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491AD2B22BD6EF0900B0890E /* Debug */,
+				491AD2B32BD6EF0900B0890E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		491AD2B42BD6EF0900B0890E /* Build configuration list for PBXNativeTarget "Arduino RemoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				491AD2B52BD6EF0900B0890E /* Debug */,
+				491AD2B62BD6EF0900B0890E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 491AD27C2BD6EF0800B0890E /* Project object */;
+}
