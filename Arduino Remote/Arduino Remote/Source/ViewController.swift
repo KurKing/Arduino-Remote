@@ -13,6 +13,8 @@ class ViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private var toggle = false
+    
+    private let ipRouter = IPInputRouter()
 
     override func viewDidLoad() {
         
@@ -23,7 +25,7 @@ class ViewController: UIViewController {
         ApiManager.shared.healthCheck
             .subscribe(onNext: { [weak self] result in
                 
-                self?.view.backgroundColor = .cyan
+                self?.view.backgroundColor = .darkMidnightBlue
             }, onError: { [weak self] error in
                 
                 self?.view.backgroundColor = .red
@@ -34,6 +36,13 @@ class ViewController: UIViewController {
                                                        action: #selector(viewTapped))
         view.addGestureRecognizer(gestureRecognizer)
         view.isUserInteractionEnabled = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        ipRouter.initializeStack(in: self)
     }
     
     @objc private func viewTapped() {

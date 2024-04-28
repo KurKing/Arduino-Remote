@@ -37,7 +37,7 @@ void loop() {
   server.handleClient();
 }
 
-// GET:
+// (GET:
 void handleRoot() {
   sendSuccessEmptyResponse();
 }
@@ -48,7 +48,7 @@ void handleReadInput() {
   doc["input_pin_state"] = digitalRead(INPUT_PIN);
 
   String response;
-  serializeJson(doc, response);
+  serializeJsondoc, response);
   server.send(200, "application/json", response);
 }
 

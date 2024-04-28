@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Input View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="IPInputViewController" id="Y6W-OH-hqX" customClass="IPInputViewController" customModule="Arduino_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XN3-Px-6DE">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zp1-m9-Zb5">
+                                        <rect key="frame" x="20" y="698" width="353" height="45"/>
+                                        <color key="backgroundColor" name="Medium Sky Blue"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="TUS-zI-yrA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="20"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Enter">
+                                            <color key="titleColor" name="Dark Midnight Blue"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter board IP address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-hG-hLY">
+                                        <rect key="frame" x="20" y="20" width="353" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="Dark Midnight Blue"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Zp1-m9-Zb5" secondAttribute="bottom" constant="16" id="4ST-TP-9Qr"/>
+                                    <constraint firstItem="pby-hG-hLY" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="PjX-Eu-wkv"/>
+                                    <constraint firstAttribute="trailing" secondItem="Zp1-m9-Zb5" secondAttribute="trailing" constant="20" id="h7y-Vt-ZdY"/>
+                                    <constraint firstAttribute="trailing" secondItem="pby-hG-hLY" secondAttribute="trailing" constant="20" id="i6c-IJ-NSJ"/>
+                                    <constraint firstItem="Zp1-m9-Zb5" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="qIV-9I-Z3Q"/>
+                                    <constraint firstItem="pby-hG-hLY" firstAttribute="top" secondItem="XN3-Px-6DE" secondAttribute="top" constant="20" id="wHC-O1-Ab0"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="Dark Midnight Blue"/>
+                        <constraints>
+                            <constraint firstItem="XN3-Px-6DE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6tw-hp-4b8"/>
+                            <constraint firstItem="XN3-Px-6DE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="BXb-cu-0Cu"/>
+                            <constraint firstItem="XN3-Px-6DE" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="Lpd-Wb-vYL"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="XN3-Px-6DE" secondAttribute="bottom" id="bda-OE-Tbg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="completeButton" destination="Zp1-m9-Zb5" id="Jm7-YZ-tSs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="101.5267175572519" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Dark Midnight Blue">
+            <color red="0.0" green="0.12156863510608673" blue="0.16862747073173523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Medium Sky Blue">
+            <color red="0.46666666865348816" green="0.92156863212585449" blue="0.94509804248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
