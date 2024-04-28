@@ -1,6 +1,0 @@
-module Pods_Arduino_RemoteTests {
-  umbrella header "Pods-Arduino RemoteTests-umbrella.h"
-
-  export *
-  module * { export * }
-}
