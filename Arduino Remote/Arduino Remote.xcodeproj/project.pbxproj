@@ -116,9 +116,8 @@
 		491AD2862BD6EF0800B0890E /* Arduino Remote */ = {
 			isa = PBXGroup;
 			children = (
-				491AD2872BD6EF0800B0890E /* AppDelegate.swift */,
-				491AD2892BD6EF0800B0890E /* SceneDelegate.swift */,
-				491AD28B2BD6EF0800B0890E /* ViewController.swift */,
+				49D917012BDEA72D00188761 /* Application */,
+				49D917022BDEA73700188761 /* Source */,
 				491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */,
 				491AD2902BD6EF0900B0890E /* Assets.xcassets */,
 				491AD2952BD6EF0900B0890E /* Info.plist */,
@@ -141,6 +140,23 @@
 				491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */,
 			);
 			path = "Arduino RemoteUITests";
+			sourceTree = "<group>";
+		};
+		49D917012BDEA72D00188761 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				491AD2872BD6EF0800B0890E /* AppDelegate.swift */,
+				491AD2892BD6EF0800B0890E /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		49D917022BDEA73700188761 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				491AD28B2BD6EF0800B0890E /* ViewController.swift */,
+			);
+			path = Source;
 			sourceTree = "<group>";
 		};
 		940F8665D516D8DFE4D989DC /* Pods */ = {

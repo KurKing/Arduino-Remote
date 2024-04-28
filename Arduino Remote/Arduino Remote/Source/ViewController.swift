@@ -13,8 +13,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
-
-        view.backgroundColor = .cyan
         
         AF.request("http://192.168.0.125/led?is_on=true")
             .validate()
