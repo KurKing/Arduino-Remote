@@ -15,6 +15,7 @@
 		491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */; };
 		491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */; };
 		491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */; };
+		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		96D09165C1FD47E56DD43B51 /* libPods-Arduino RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EF08116B43007CED008D1E /* libPods-Arduino RemoteTests.a */; };
 		A137405446F88236B72B0D12 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DC440AA9F1D40A0C58FE09 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
 		FAE6DF0A53C9DE3B3824BFE3 /* libPods-Arduino Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B20F9A44DC99353F975B9C /* libPods-Arduino Remote.a */; };
@@ -53,6 +54,7 @@
 		491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITests.swift; sourceTree = "<group>"; };
 		491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		63ACE826165F6744BE8E533F /* Pods-Arduino Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF6539A5203BB4B63ED03F5 /* Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F61E85275789546A0FFA4E2 /* Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteTests/Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -154,9 +156,26 @@
 		49D917022BDEA73700188761 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				49D917062BDEB48600188761 /* Network */,
+				49D917032BDEB43900188761 /* IPFetcher */,
 				491AD28B2BD6EF0800B0890E /* ViewController.swift */,
 			);
 			path = Source;
+			sourceTree = "<group>";
+		};
+		49D917032BDEB43900188761 /* IPFetcher */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = IPFetcher;
+			sourceTree = "<group>";
+		};
+		49D917062BDEB48600188761 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				49D917072BDEB49300188761 /* ApiManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		940F8665D516D8DFE4D989DC /* Pods */ = {
@@ -440,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,

@@ -39,13 +39,7 @@ void loop() {
 
 // GET:
 void handleRoot() {
-
-  StaticJsonDocument<30> doc;
-  doc["status"] = "OK";
-
-  String response;
-  serializeJson(doc, response);
-  server.send(200, "application/json", response);
+  sendSuccessEmptyResponse();
 }
 
 void handleReadInput() {
@@ -61,19 +55,18 @@ void handleReadInput() {
 // POST:
 void handleLed() {
 
-  StaticJsonDocument<100> doc;
-  String isOn = server.arg("is_on");
+  bool isOn = server.arg("is_on") == "true";
+  digitalWrite(LED, isOn ? HIGH : LOW);
 
-  if (isOn == "true") {
+  sendSuccessEmptyResponse();
+}
 
-    digitalWrite(LED, HIGH);
-    doc["led_status"] = true;
-  } else {
+// HELPER:
+void sendSuccessEmptyResponse() {
 
-    digitalWrite(LED, LOW);
-    doc["led_status"] = false;
-  }
-
+  StaticJsonDocument<30> doc;
+  doc["status"] = "OK";
+  
   String response;
   serializeJson(doc, response);
   server.send(200, "application/json", response);
