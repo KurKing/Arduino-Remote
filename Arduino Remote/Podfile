@@ -1,0 +1,22 @@
+install! 'cocoapods', :warn_for_unused_master_specs_repo => false
+
+platform :ios, '14.0'
+
+target 'Arduino Remote' do
+
+  pod 'Alamofire'
+
+  # Pods for Arduino Remote
+
+  target 'Arduino RemoteTests' do
+    inherit! :search_paths
+
+    pod 'Alamofire'
+  end
+
+  target 'Arduino RemoteUITests' do
+
+    pod 'Alamofire'
+  end
+
+end

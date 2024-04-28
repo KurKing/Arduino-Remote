@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
 
@@ -14,6 +15,11 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         view.backgroundColor = .cyan
+        
+        AF.request("http://192.168.0.125/led?is_on=true")
+            .validate()
+            .response { data in
+                print(data)
+            }
     }
 }
-
