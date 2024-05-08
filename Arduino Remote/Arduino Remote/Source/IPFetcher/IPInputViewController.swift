@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 extension IPInputViewController {
     
@@ -19,23 +21,135 @@ extension IPInputViewController {
         
         viewController.modalPresentationStyle = .fullScreen
         
+        viewController.viewModel = IPInputViewModel()
+        
         return viewController
     }
 }
 
 class IPInputViewController: UIViewController {
     
+    private enum Sizes {
+        static let buttonBottomPadding: CGFloat = 16
+    }
+    
     @IBOutlet weak var completeButton: UIButton!
+    @IBOutlet weak var completeButtonBottomConstraint: NSLayoutConstraint!
+    @IBOutlet weak var inputTextField: UITextField!
+    
+    private var viewModel: IPInputViewModelProtocol!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
         setupUI()
+        setupKeyboard()
+        setupActions()
     }
     
-    private func setupUI() {
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        inputTextField.becomeFirstResponder()
+    }
+}
+
+// MARK: Setup
+private extension IPInputViewController {
+    
+    func setupUI() {
         
         completeButton.layer.cornerRadius = 8
+        
+        inputTextField.delegate = self
+        inputTextField.addTarget(self,
+                                 action: #selector(inputTextFieldDidChange(_:)),
+                                 for: .editingChanged)
+    }
+    
+    func setupKeyboard() {
+        
+        keyboardRect
+            .subscribe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] rect in
+                
+                guard let self = self,
+                      let constraint = self.completeButtonBottomConstraint else { return }
+                let height = rect.height
+                
+                if height < Sizes.buttonBottomPadding {
+                    constraint.constant = Sizes.buttonBottomPadding
+                } else {
+                    constraint.constant = height
+                }
+                
+                self.view.layoutIfNeeded()
+            }).disposed(by: disposeBag)
+        
+        let tap: UITapGestureRecognizer =
+        UITapGestureRecognizer(target: self,
+                               action: #selector(dismissKeyboardAction))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboardAction() {
+        view.endEditing(true)
+    }
+}
+
+// MARK: - Actions
+private extension IPInputViewController {
+    
+    func setupActions() {
+        
+        completeButton.rx.tap.subscribe(onNext: { [weak self] _ in
+            self?.onComplete()
+        }).disposed(by: disposeBag)
+    }
+    
+    func onComplete() {
+        
+        print(viewModel.ipAddress.value)
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension IPInputViewController: UITextFieldDelegate {
+    
+    @objc func inputTextFieldDidChange(_ textField: UITextField) {
+        
+        let text = (textField.text ?? "").trimmed
+        viewModel.ipAddress.accept(text)
+    }
+    
+    func textField(_ textField: UITextField,
+                   shouldChangeCharactersIn range: NSRange,
+                   replacementString string: String) -> Bool {
+                
+        guard let text = textField.text,
+              let range = Range(range, in: text) else { return true }
+        
+        let newText = text.replacingCharacters(in: range, with: string)
+        if newText.count >= 16 { return false }
+        
+        let string = string.trimmed
+        
+        return string.isEmpty || string.containsOnlyNumbersAndDots
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if viewModel.isCompleteButtonEnabled.value {
+            
+            textField.resignFirstResponder()
+            
+            
+            return true
+        }
+        
+        return false
     }
 }

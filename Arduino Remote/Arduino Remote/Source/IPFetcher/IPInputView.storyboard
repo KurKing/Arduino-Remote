@@ -32,17 +32,26 @@
                                             <color key="titleColor" name="Dark Midnight Blue"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter board IP address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-hG-hLY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter board's IP address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-hG-hLY">
                                         <rect key="frame" x="20" y="20" width="353" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168." placeholder="192.168.X.XXX" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-iT-HQT">
+                                        <rect key="frame" x="20" y="148" width="353" height="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="Dark Midnight Blue"/>
                                 <constraints>
+                                    <constraint firstItem="PfV-iT-HQT" firstAttribute="top" secondItem="pby-hG-hLY" secondAttribute="bottom" constant="100" id="09C-sz-xwr"/>
                                     <constraint firstAttribute="bottom" secondItem="Zp1-m9-Zb5" secondAttribute="bottom" constant="16" id="4ST-TP-9Qr"/>
+                                    <constraint firstItem="PfV-iT-HQT" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="JTE-FJ-sfa"/>
                                     <constraint firstItem="pby-hG-hLY" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="PjX-Eu-wkv"/>
+                                    <constraint firstAttribute="trailing" secondItem="PfV-iT-HQT" secondAttribute="trailing" constant="20" id="cgS-wl-0L8"/>
                                     <constraint firstAttribute="trailing" secondItem="Zp1-m9-Zb5" secondAttribute="trailing" constant="20" id="h7y-Vt-ZdY"/>
                                     <constraint firstAttribute="trailing" secondItem="pby-hG-hLY" secondAttribute="trailing" constant="20" id="i6c-IJ-NSJ"/>
                                     <constraint firstItem="Zp1-m9-Zb5" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="qIV-9I-Z3Q"/>
@@ -61,6 +70,8 @@
                     </view>
                     <connections>
                         <outlet property="completeButton" destination="Zp1-m9-Zb5" id="Jm7-YZ-tSs"/>
+                        <outlet property="completeButtonBottomConstraint" destination="4ST-TP-9Qr" id="IYx-Tf-fsk"/>
+                        <outlet property="inputTextField" destination="PfV-iT-HQT" id="2Pg-gA-4SH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
