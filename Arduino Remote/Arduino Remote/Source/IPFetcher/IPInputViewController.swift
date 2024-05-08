@@ -68,6 +68,19 @@ private extension IPInputViewController {
         inputTextField.addTarget(self,
                                  action: #selector(inputTextFieldDidChange(_:)),
                                  for: .editingChanged)
+        
+        viewModel.isCompleteButtonEnabled
+            .observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] isEnabled in
+                
+                guard let button = self?.completeButton else { return }
+                
+                if isEnabled {
+                    button.alpha = 1.0
+                } else {
+                    button.alpha = 0.5
+                }
+            }).disposed(by: disposeBag)
     }
     
     func setupKeyboard() {
@@ -88,15 +101,6 @@ private extension IPInputViewController {
                 
                 self.view.layoutIfNeeded()
             }).disposed(by: disposeBag)
-        
-        let tap: UITapGestureRecognizer =
-        UITapGestureRecognizer(target: self,
-                               action: #selector(dismissKeyboardAction))
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboardAction() {
-        view.endEditing(true)
     }
 }
 
@@ -112,7 +116,15 @@ private extension IPInputViewController {
     
     func onComplete() {
         
-        print(viewModel.ipAddress.value)
+        guard let viewModel = viewModel,
+              viewModel.isCompleteButtonEnabled.value else {
+            
+            inputTextField.shake()
+            return
+        }
+        
+        inputTextField.resignFirstResponder()
+        viewModel.complete()
     }
 }
 
@@ -143,13 +155,11 @@ extension IPInputViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
         if viewModel.isCompleteButtonEnabled.value {
-            
-            textField.resignFirstResponder()
-            
-            
+            onComplete()
             return true
         }
         
+        textField.shake()
         return false
     }
 }

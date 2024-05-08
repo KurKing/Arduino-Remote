@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,22 +33,22 @@
                                             <color key="titleColor" name="Dark Midnight Blue"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter board's IP address:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-hG-hLY">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Board's IP:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pby-hG-hLY">
                                         <rect key="frame" x="20" y="20" width="353" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="24"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="192.168." placeholder="192.168.X.XXX" textAlignment="center" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-iT-HQT">
-                                        <rect key="frame" x="20" y="148" width="353" height="32"/>
+                                        <rect key="frame" x="20" y="198" width="353" height="32"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="26"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" returnKeyType="go"/>
                                     </textField>
                                 </subviews>
                                 <color key="backgroundColor" name="Dark Midnight Blue"/>
                                 <constraints>
-                                    <constraint firstItem="PfV-iT-HQT" firstAttribute="top" secondItem="pby-hG-hLY" secondAttribute="bottom" constant="100" id="09C-sz-xwr"/>
+                                    <constraint firstItem="PfV-iT-HQT" firstAttribute="top" secondItem="pby-hG-hLY" secondAttribute="bottom" constant="150" id="09C-sz-xwr"/>
                                     <constraint firstAttribute="bottom" secondItem="Zp1-m9-Zb5" secondAttribute="bottom" constant="16" id="4ST-TP-9Qr"/>
                                     <constraint firstItem="PfV-iT-HQT" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="JTE-FJ-sfa"/>
                                     <constraint firstItem="pby-hG-hLY" firstAttribute="leading" secondItem="XN3-Px-6DE" secondAttribute="leading" constant="20" id="PjX-Eu-wkv"/>
@@ -78,13 +79,68 @@
             </objects>
             <point key="canvasLocation" x="101.5267175572519" y="-28.169014084507044"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="REU-8k-xzQ">
+            <objects>
+                <viewController storyboardIdentifier="FakeLaunchScreen" id="Rgo-So-1bp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1z8-gS-0DY">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Icb-Ls-3mA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="QfJ-11-60r">
+                                        <rect key="frame" x="96.666666666666686" y="312" width="200" height="228.33333333333337"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Icon" translatesAutoresizingMaskIntoConstraints="NO" id="DFQ-fk-ahf">
+                                                <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="Qob-Vc-vq9"/>
+                                                    <constraint firstAttribute="width" constant="200" id="t6u-11-Pwj"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#by KurKing." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wP-Cw-KvG">
+                                                <rect key="frame" x="52.333333333333329" y="208" width="94.999999999999986" height="20.333333333333343"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" name="Dark Midnight Blue"/>
+                                <constraints>
+                                    <constraint firstItem="QfJ-11-60r" firstAttribute="centerX" secondItem="Icb-Ls-3mA" secondAttribute="centerX" id="WQ7-Jh-3eR"/>
+                                    <constraint firstItem="QfJ-11-60r" firstAttribute="centerY" secondItem="Icb-Ls-3mA" secondAttribute="centerY" id="pvx-1B-bk2"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3dH-EY-JvL"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Icb-Ls-3mA" firstAttribute="trailing" secondItem="3dH-EY-JvL" secondAttribute="trailing" id="Nhm-3h-syh"/>
+                            <constraint firstAttribute="bottom" secondItem="Icb-Ls-3mA" secondAttribute="bottom" id="OYW-w6-0Et"/>
+                            <constraint firstItem="Icb-Ls-3mA" firstAttribute="top" secondItem="1z8-gS-0DY" secondAttribute="top" id="iBJ-22-1zX"/>
+                            <constraint firstItem="Icb-Ls-3mA" firstAttribute="leading" secondItem="3dH-EY-JvL" secondAttribute="leading" id="o2L-Jz-tR7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WTK-SK-Gv7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-608" y="-23"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="Icon" width="1024" height="1024"/>
         <namedColor name="Dark Midnight Blue">
             <color red="0.0" green="0.12156863510608673" blue="0.16862747073173523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Medium Sky Blue">
             <color red="0.46666666865348816" green="0.92156863212585449" blue="0.94509804248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
