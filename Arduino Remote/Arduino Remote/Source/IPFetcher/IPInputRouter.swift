@@ -7,16 +7,56 @@
 
 import UIKit
 
-class IPInputRouter: UIRouterProtocol {
+class IPInputRouter: RouterProtocol {
     
-    func initializeStack(in presenter: UIViewController) {
+    private var fakeLaunch: UIViewController?
+    
+    func route(to route: Route, _ context: UIViewController, _ parameter: Any?) {
         
-        let vc = IPInputViewController.createInstance()
+        switch route {
+        case .fakeLaunchScreen:
+            
+            placeFakeLaunch(context: context)
+            
+        case .ipInput:
+            
+            let vc = IPInputViewController.createInstance()
+            context.navigationController?.pushViewController(vc, animated: true)
+
+        case .back:
+            
+            removeFakeLaunch()
+            context.presentedViewController?.dismiss(animated: true)
+        default:
+            fatalError("Unsupported route")
+        }
+    }
+}
+
+// MARK: Fake launch
+private extension IPInputRouter {
+    
+    private var screenTag: Int { 123321 }
+    
+    func placeFakeLaunch(context: UIViewController) {
         
-        presenter.present(vc, animated: false)
+        let storyboard = UIStoryboard(name: "LaunchScreen", bundle: nil)
+        let viewController = storyboard.instantiateInitialViewController()!
+        
+        context.addChild(viewController)
+        context.view.addSubview(viewController.view)
+        
+        viewController.view.tag = screenTag
+        viewController.view.pin(to: context.view)
+        viewController.didMove(toParent: context)
+        
+        fakeLaunch = viewController
     }
     
-    func route(to route: UIRoute, _ context: UIViewController, _ parameter: Any?) {
+    func removeFakeLaunch() {
         
+        fakeLaunch?.removeFromParent()
+        fakeLaunch?.view.removeFromSuperview()
+        fakeLaunch = nil
     }
 }

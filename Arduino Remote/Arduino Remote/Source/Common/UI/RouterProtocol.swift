@@ -7,18 +7,19 @@
 
 import UIKit
 
-enum UIRoute {
+enum Route {
     
     case back
     case ipInput
+    case fakeLaunchScreen
 }
 
-protocol UIRouterProtocol {
-    func route(to route: UIRoute, _ context: UIViewController, _ parameter: Any?)
+protocol RouterProtocol {
+    func route(to route: Route, _ context: UIViewController, _ parameter: Any?)
 }
 
-extension UIRouterProtocol {
-    func route(to route: UIRoute, _ context: UIViewController) {
+extension RouterProtocol {
+    func route(to route: Route, _ context: UIViewController) {
         self.route(to: route, context, nil)
     }
 }

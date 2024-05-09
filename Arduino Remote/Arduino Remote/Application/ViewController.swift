@@ -41,8 +41,6 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
-        
-        ipRouter.initializeStack(in: self)
     }
     
     @objc private func viewTapped() {
