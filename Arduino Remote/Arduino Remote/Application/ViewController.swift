@@ -20,9 +20,9 @@ class ViewController: UIViewController {
         
         super.viewDidLoad()
         
-        ApiManager.shared.configure(with: "192.168.0.125")
+        resolve(ApiManager.self).configure(with: "192.168.0.125")
         
-        ApiManager.shared.healthCheck
+        resolve(ApiManager.self).healthCheck()
             .subscribe(onNext: { [weak self] result in
                 
                 self?.view.backgroundColor = .darkMidnightBlue
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         toggle.toggle()
         
-        ApiManager.shared.ledRequest(isOn: toggle)
+        resolve(ApiManager.self).ledRequest(isOn: toggle)
             .subscribe(onNext: { [weak self] _ in
                 
                 self?.view.backgroundColor = [UIColor.yellow, 

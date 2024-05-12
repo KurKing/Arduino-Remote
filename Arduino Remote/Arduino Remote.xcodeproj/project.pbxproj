@@ -19,6 +19,8 @@
 		4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E22C2BEBF485000BC00E /* String + Extension.swift */; };
 		4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2302BEC0DA3000BC00E /* RootViewController.swift */; };
 		4938E2332BECB540000BC00E /* IPFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2322BECB540000BC00E /* IPFetchService.swift */; };
+		4938E2362BF13EAD000BC00E /* Hopoate in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2352BF13EAD000BC00E /* Hopoate */; };
+		4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2382BF13F75000BC00E /* Hopoate.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -69,6 +71,7 @@
 		4938E22C2BEBF485000BC00E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		4938E2302BEC0DA3000BC00E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4938E2322BECB540000BC00E /* IPFetchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPFetchService.swift; sourceTree = "<group>"; };
+		4938E2382BF13F75000BC00E /* Hopoate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hopoate.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +96,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAE6DF0A53C9DE3B3824BFE3 /* libPods-Arduino Remote.a in Frameworks */,
+				4938E2362BF13EAD000BC00E /* Hopoate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +180,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		4938E2372BF13F6B000BC00E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4938E2382BF13F75000BC00E /* Hopoate.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		49D917012BDEA72D00188761 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +232,7 @@
 		49D917112BDEDD7B00188761 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				4938E2372BF13F6B000BC00E /* Data */,
 				4938E22B2BEBF473000BC00E /* Extensions */,
 				49D917122BDEDD8300188761 /* UI */,
 				49D917062BDEB48600188761 /* Network */,
@@ -278,6 +291,9 @@
 			dependencies = (
 			);
 			name = "Arduino Remote";
+			packageProductDependencies = (
+				4938E2352BF13EAD000BC00E /* Hopoate */,
+			);
 			productName = "Arduino Remote";
 			productReference = 491AD2842BD6EF0800B0890E /* Arduino Remote.app */;
 			productType = "com.apple.product-type.application";
@@ -354,6 +370,9 @@
 				Base,
 			);
 			mainGroup = 491AD27B2BD6EF0800B0890E;
+			packageReferences = (
+				4938E2342BF13EAD000BC00E /* XCRemoteSwiftPackageReference "hopoate" */,
+			);
 			productRefGroup = 491AD2852BD6EF0800B0890E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -521,6 +540,7 @@
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
+				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
 				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */,
 				49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */,
@@ -897,6 +917,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4938E2342BF13EAD000BC00E /* XCRemoteSwiftPackageReference "hopoate" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darjeelingsteve/hopoate";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4938E2352BF13EAD000BC00E /* Hopoate */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2342BF13EAD000BC00E /* XCRemoteSwiftPackageReference "hopoate" */;
+			productName = Hopoate;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 491AD27C2BD6EF0800B0890E /* Project object */;
 }

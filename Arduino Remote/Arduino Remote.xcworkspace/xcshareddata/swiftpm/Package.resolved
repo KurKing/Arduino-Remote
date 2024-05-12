@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "hopoate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/darjeelingsteve/hopoate",
+      "state" : {
+        "revision" : "7600d4a73ceff961c1403352a510cc9a8392baf2",
+        "version" : "1.10.0"
+      }
+    }
+  ],
+  "version" : 2
+}

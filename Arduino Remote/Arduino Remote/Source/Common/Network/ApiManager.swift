@@ -15,10 +15,16 @@ enum ApiManagerError: Error {
     case unknown
 }
 
-final class ApiManager {
+protocol ApiManager {
     
-    static let shared = ApiManager()
+    func configure(with ip: String)
     
+    func healthCheck() -> Observable<Void>
+    func ledRequest(isOn: Bool) -> Observable<Void>
+}
+
+final class AlamofireApiManager: ApiManager {
+        
     private var baseURL: String?
     
     func configure(with ip: String) {
@@ -26,7 +32,7 @@ final class ApiManager {
         baseURL = "http://\(ip)"
     }
     
-    var healthCheck: Observable<Void> {
+    func healthCheck() -> Observable<Void> {
         
         request(path: "/", timeoutInterval: 3).map({ (_: EmptyResponse) in () })
     }

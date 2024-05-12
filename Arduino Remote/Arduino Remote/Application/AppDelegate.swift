@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hopoate
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        _ = ApiManager.shared
+        DependencyContainer.shared.register(AlamofireApiManager(), for: ApiManager.self)
         
         return true
     }

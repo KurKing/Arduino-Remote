@@ -17,6 +17,8 @@ class IPFetchService: IPFetchServiceProtocol {
     private let router: RouterProtocol
     private let disposeBag = DisposeBag()
     
+    private var apiManager: ApiManager { resolve(ApiManager.self) }
+    
     init(router: RouterProtocol = IPInputRouter()) {
         self.router = router
     }
@@ -57,9 +59,9 @@ private extension IPFetchService {
     
     func check(address: String, with block: ((Bool)->())?) {
         
-        ApiManager.shared.configure(with: address)
+        apiManager.configure(with: address)
 
-        ApiManager.shared.healthCheck
+        apiManager.healthCheck()
             .subscribe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { _ in
                 block?(true)
