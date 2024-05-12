@@ -11,7 +11,7 @@ import RxCocoa
 
 extension IPInputViewController {
     
-    class func createInstance() -> IPInputViewController {
+    class func createInstance(viewModel: IPInputViewModelProtocol) -> IPInputViewController {
         
         let storyboard = UIStoryboard(name: "IPInputView", bundle: nil)
         let identifier = "IPInputViewController"
@@ -21,7 +21,7 @@ extension IPInputViewController {
         
         viewController.modalPresentationStyle = .fullScreen
         
-        viewController.viewModel = IPInputViewModel()
+        viewController.viewModel = viewModel
         
         return viewController
     }
@@ -64,11 +64,14 @@ private extension IPInputViewController {
         
         completeButton.layer.cornerRadius = 8
         
+        navigationItem.hidesBackButton = true
+        
         inputTextField.delegate = self
         inputTextField.addTarget(self,
                                  action: #selector(inputTextFieldDidChange(_:)),
                                  for: .editingChanged)
         
+        completeButton?.alpha = 0.5
         viewModel.isCompleteButtonEnabled
             .observe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] isEnabled in

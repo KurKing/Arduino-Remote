@@ -22,6 +22,8 @@ class IPInputViewModel: IPInputViewModelProtocol {
     let isCompleteButtonEnabled = BehaviorRelay<Bool>(value: false)
     let ipAddress = BehaviorRelay<String>(value: "192.168.")
     
+    var onComplete: ((String) -> ())?
+    
     private let disposeBag = DisposeBag()
     
     init() {
@@ -35,6 +37,10 @@ class IPInputViewModel: IPInputViewModelProtocol {
     
     func complete() {
         
+        let ipAddress = ipAddress.value.trimmed
         
+        if ipAddress.isIpAddress {
+            onComplete?(ipAddress)
+        }
     }
 }

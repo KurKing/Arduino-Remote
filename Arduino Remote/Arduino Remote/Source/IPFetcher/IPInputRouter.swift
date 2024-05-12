@@ -20,13 +20,19 @@ class IPInputRouter: RouterProtocol {
             
         case .ipInput:
             
-            let vc = IPInputViewController.createInstance()
+            let viewModel = IPInputViewModel()
+            
+            if let completion = parameter as? ((String) -> ()) {
+                viewModel.onComplete = completion
+            }
+            
+            let vc = IPInputViewController.createInstance(viewModel: viewModel)
+            
             context.navigationController?.pushViewController(vc, animated: true)
 
         case .back:
             
-            removeFakeLaunch()
-            context.presentedViewController?.dismiss(animated: true)
+            context.navigationController?.popViewController(animated: true)
         default:
             fatalError("Unsupported route")
         }

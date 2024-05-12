@@ -93,7 +93,15 @@ private extension IPFetchService {
         let onComplete = { [weak self] ipAddress in
             
             self?.router.route(to: .back, context)
-            block?(ipAddress)
+            
+            self?.check(address: ipAddress, with: { [weak self] isValid in
+                
+                if isValid {
+                    block?(ipAddress)
+                } else {
+                    self?.presentInputScreen(context: context, with: block)
+                }
+            })
         }
         
         router.route(to: .ipInput, context, onComplete)

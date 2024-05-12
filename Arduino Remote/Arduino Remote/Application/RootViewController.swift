@@ -10,11 +10,21 @@ import UIKit
 class RootViewController: UIViewController {
     
     private lazy var ipFetcher: IPFetchServiceProtocol = IPFetchService()
+    private var isInitiated = false
     
     override func viewWillAppear(_ animated: Bool) {
         
-        ipFetcher.fetchIP(context: self) { [weak self] in
-            self?.presentChildViews()
+        super.viewWillAppear(animated)
+        
+        if !isInitiated {
+            
+            ipFetcher.fetchIP(context: self) { [weak self] in
+                self?.presentChildViews()
+            }
+            
+            isInitiated = true
+        } else {
+            
         }
     }
     
