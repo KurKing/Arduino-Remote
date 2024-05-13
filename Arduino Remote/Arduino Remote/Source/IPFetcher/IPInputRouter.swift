@@ -20,10 +20,8 @@ class IPInputRouter: RouterProtocol {
             
         case .ipInput:
             
-            let viewModel = IPInputViewModel()
-            
-            if let completion = parameter as? ((String) -> ()) {
-                viewModel.onComplete = completion
+            guard let viewModel = parameter as? IPInputViewModelProtocol else {
+                return
             }
             
             let vc = IPInputViewController.createInstance(viewModel: viewModel)

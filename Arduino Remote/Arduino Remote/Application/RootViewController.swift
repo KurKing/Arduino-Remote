@@ -9,7 +9,7 @@ import UIKit
 
 class RootViewController: UIViewController {
     
-    private lazy var ipFetcher: IPFetchServiceProtocol = IPFetchService()
+    private lazy var ipFetcher: IPFetchServiceProtocol? = IPFetchService()
     private var isInitiated = false
     
     override func viewWillAppear(_ animated: Bool) {
@@ -18,12 +18,14 @@ class RootViewController: UIViewController {
         
         if !isInitiated {
             
-            ipFetcher.fetchIP(context: self) { [weak self] in
+            ipFetcher?.fetchIP(context: self) { [weak self] in
                 self?.presentChildViews()
+                self?.ipFetcher = nil
             }
             
             isInitiated = true
         } else {
+            
             
         }
     }

@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         register(AlamofireApiManager(), for: ApiManager.self)
         register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
+        register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
         
         return true
     }

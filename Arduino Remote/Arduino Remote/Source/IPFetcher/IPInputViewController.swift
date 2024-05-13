@@ -84,6 +84,18 @@ private extension IPInputViewController {
                     button.alpha = 0.5
                 }
             }).disposed(by: disposeBag)
+        
+        viewModel.isLoading.observe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { isLoading in
+                
+                let indicator = resolve(LoadingIndicator.self)
+                
+                if isLoading {
+                    indicator.show()
+                } else {
+                    indicator.hide()
+                }
+            }).disposed(by: disposeBag)
     }
     
     func setupKeyboard() {

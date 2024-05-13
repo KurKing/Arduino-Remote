@@ -31,6 +31,9 @@
 		4938E24C2BF23641000BC00E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E24B2BF23641000BC00E /* KeychainAccess */; };
 		4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E24D2BF237EB000BC00E /* KeychainStorage.swift */; };
 		4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */; };
+		4938E2532BF26132000BC00E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2522BF26132000BC00E /* SVProgressHUD */; };
+		4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2542BF26159000BC00E /* LoadingIndicator.swift */; };
+		4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2562BF269C9000BC00E /* IPInputModel.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -80,6 +83,8 @@
 		4938E23E2BF2321E000BC00E /* RealmLocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLocalStorageManager.swift; sourceTree = "<group>"; };
 		4938E24D2BF237EB000BC00E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
 		4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredIpAddressConfig.swift; sourceTree = "<group>"; };
+		4938E2542BF26159000BC00E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		4938E2562BF269C9000BC00E /* IPInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputModel.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +113,7 @@
 				4938E2422BF234F3000BC00E /* RxCocoa in Frameworks */,
 				4938E24C2BF23641000BC00E /* KeychainAccess in Frameworks */,
 				4938E2362BF13EAD000BC00E /* Hopoate in Frameworks */,
+				4938E2532BF26132000BC00E /* SVProgressHUD in Frameworks */,
 				4938E2462BF234F3000BC00E /* RxSwift in Frameworks */,
 				4938E2442BF234F3000BC00E /* RxRelay in Frameworks */,
 				1A9E1549EB5F58B922760B27 /* libPods-Arduino Remote.a in Frameworks */,
@@ -239,6 +245,7 @@
 				4938E2322BECB540000BC00E /* IPFetchService.swift */,
 				49D917092BDEDD4200188761 /* IPInputViewController.swift */,
 				49D917152BDEE54000188761 /* IPInputView.storyboard */,
+				4938E2562BF269C9000BC00E /* IPInputModel.swift */,
 				49D9170B2BDEDD5100188761 /* IPInputViewModel.swift */,
 				49D9170F2BDEDD7100188761 /* IPInputRouter.swift */,
 			);
@@ -268,6 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				49D917132BDEDD9000188761 /* RouterProtocol.swift */,
+				4938E2542BF26159000BC00E /* LoadingIndicator.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -322,6 +330,7 @@
 				4938E2452BF234F3000BC00E /* RxSwift */,
 				4938E2482BF235B6000BC00E /* RealmSwift */,
 				4938E24B2BF23641000BC00E /* KeychainAccess */,
+				4938E2522BF26132000BC00E /* SVProgressHUD */,
 			);
 			productName = "Arduino Remote";
 			productReference = 491AD2842BD6EF0800B0890E /* Arduino Remote.app */;
@@ -404,6 +413,7 @@
 				4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */,
 				4938E2472BF235B6000BC00E /* XCRemoteSwiftPackageReference "realm-swift" */,
 				4938E24A2BF23641000BC00E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				4938E2512BF26132000BC00E /* XCRemoteSwiftPackageReference "SVProgressHUD" */,
 			);
 			productRefGroup = 491AD2852BD6EF0800B0890E /* Products */;
 			projectDirPath = "";
@@ -568,6 +578,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */,
 				4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */,
 				49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */,
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
@@ -583,6 +594,7 @@
 				4938E23F2BF2321E000BC00E /* RealmLocalStorageManager.swift in Sources */,
 				49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */,
 				4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */,
+				4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
 			);
@@ -985,6 +997,14 @@
 				kind = branch;
 			};
 		};
+		4938E2512BF26132000BC00E /* XCRemoteSwiftPackageReference "SVProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SVProgressHUD/SVProgressHUD.git";
+			requirement = {
+				kind = exactVersion;
+				version = 2.3.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1017,6 +1037,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4938E24A2BF23641000BC00E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
+		};
+		4938E2522BF26132000BC00E /* SVProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2512BF26132000BC00E /* XCRemoteSwiftPackageReference "SVProgressHUD" */;
+			productName = SVProgressHUD;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
