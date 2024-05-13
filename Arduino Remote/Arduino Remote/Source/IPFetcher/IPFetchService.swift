@@ -36,6 +36,7 @@ class IPFetchService: IPFetchServiceProtocol {
         let model = viewModel.model
         viewModel.onComplete = { [weak self] _ in
             self?.router.route(to: .back, context)
+            block?()
         }
         
         model.getStoredIpAddress()

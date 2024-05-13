@@ -41,8 +41,7 @@ class IPInputViewModel: IPInputViewModelProtocol {
         ipAddress.map({ $0.isIpAddress })
             .subscribe(onNext: { [weak self] isValid in
                 self?.isCompleteButtonEnabled.accept(isValid)
-            })
-            .disposed(by: disposeBag)
+            }).disposed(by: disposeBag)
     }
     
     func complete() {
