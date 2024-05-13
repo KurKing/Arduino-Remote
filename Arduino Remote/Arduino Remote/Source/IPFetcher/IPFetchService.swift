@@ -18,6 +18,7 @@ class IPFetchService: IPFetchServiceProtocol {
     private let disposeBag = DisposeBag()
     
     private var apiManager: ApiManager { resolve(ApiManager.self) }
+    private var localStorageManager: RealmStorageManager { resolve(RealmStorageManager.self) }
     
     init(router: RouterProtocol = IPInputRouter()) {
         self.router = router
@@ -27,85 +28,113 @@ class IPFetchService: IPFetchServiceProtocol {
         
         router.route(to: .fakeLaunchScreen, context)
         
-        if let storedIPAddress = getStoredIPAddress() {
-            
-            check(address: storedIPAddress) { [weak self] isValid in
+        getStoredIPAddress()
+            .flatMapFirst({ [weak self] ipAddress -> Observable<String> in
                 
-                if isValid {
-                    
-                    self?.router.route(to: .back, context)
-                    block?()
-                    return
+                guard let self = self else {
+                    return Observable.error(ApiManagerError.noBaseURL)
                 }
+                
+                return self.check(address: ipAddress)
+            })
+            .subscribe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] ipAddress in
+                
+                self?.router.route(to: .back, context)
+                block?()
+            }, onError: { [weak self] _ in
                 
                 self?.save(ipAddress: nil)
-                self?.presentInputScreen(context: context) { [weak self] ipAddress in
-                    self?.save(ipAddress: ipAddress)
-                }
-            }
-            return
-        }
-        
-        presentInputScreen(context: context) { [weak self] ipAddress in
-            
-            self?.save(ipAddress: ipAddress)
-            block?()
-        }
+                self?.presentInputScreen(context: context, with: block)
+            }).disposed(by: disposeBag)
     }
 }
 
 // MARK: Helpers
 private extension IPFetchService {
     
-    func check(address: String, with block: ((Bool)->())?) {
+    func check(address: String) -> Observable<String> {
         
         apiManager.configure(with: address)
 
-        apiManager.healthCheck()
-            .subscribe(on: MainScheduler.asyncInstance)
-            .subscribe(onNext: { _ in
-                block?(true)
-            }, onError: { error in
-                
-                print("[HEALTH CHECK] Error: \(error)")
-                block?(false)
-            })
-            .disposed(by: disposeBag)
+        return apiManager.healthCheck().map({ _ in address })
     }
 }
 
 // MARK: Local storage
 private extension IPFetchService {
     
-    func getStoredIPAddress() -> String? {
-        return nil
+    func getStoredIPAddress() -> Observable<String> {
+        
+        Observable.create { observer in
+            
+            self.localStorageManager.read { realm in
+                
+                guard let ipAddress = realm.objects(StoredIpAddressConfig.self)
+                    .first?
+                    .ipAddress
+                    .emptyToNil else {
+                    
+                    observer.onError(LocalStorageError.objectNotFound)
+                    return
+                }
+                
+                observer.onNext(ipAddress)
+                observer.onCompleted()
+            }
+            
+            return Disposables.create()
+        }
     }
     
     func save(ipAddress: String?) {
         
-        
+        localStorageManager.read { realm in
+            
+            if let existedObject = realm.objects(StoredIpAddressConfig.self).first {
+                
+                try? realm.write({
+                    existedObject.ipAddress = ipAddress ?? ""
+                })
+                return
+            }
+            
+            let config = StoredIpAddressConfig()
+            config.ipAddress = ipAddress ?? ""
+            
+            try? realm.write({
+                realm.add(config)
+            })
+        }
     }
 }
 
 // MARK: From user
 private extension IPFetchService {
     
-    func presentInputScreen(context: UIViewController, with block: ((String) -> ())?) {
+    func presentInputScreen(context: UIViewController, with block: (()->())?) {
         
         let onComplete = { [weak self] ipAddress in
             
-            self?.router.route(to: .back, context)
+            guard let self = self else { return }
             
-            self?.check(address: ipAddress, with: { [weak self] isValid in
-                
-                if isValid {
-                    block?(ipAddress)
-                } else {
+            self.router.route(to: .back, context)
+            
+            self.check(address: ipAddress)
+                .subscribe(on: MainScheduler.asyncInstance)
+                .subscribe(onNext: { [weak self] validIpAddress in
+                    
+                    self?.save(ipAddress: validIpAddress)
+                    self?.router.route(to: .back, context)
+                    block?()
+                }, onError: { [weak self] _ in
+                    
                     self?.presentInputScreen(context: context, with: block)
-                }
-            })
+                }).disposed(by: self.disposeBag)
         }
         
-        router.route(to: .ipInput, context, onComplete)
+        DispatchQueue.main.async {
+            self.router.route(to: .ipInput, context, onComplete)
+        }
     }
 }

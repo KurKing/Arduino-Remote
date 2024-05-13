@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A9E1549EB5F58B922760B27 /* libPods-Arduino Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26F7D0D037EC81B97AC42 /* libPods-Arduino Remote.a */; };
+		437D3ED115B7C0A93460BAE7 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
 		491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2872BD6EF0800B0890E /* AppDelegate.swift */; };
 		491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2892BD6EF0800B0890E /* SceneDelegate.swift */; };
 		491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD28B2BD6EF0800B0890E /* ViewController.swift */; };
@@ -21,17 +23,22 @@
 		4938E2332BECB540000BC00E /* IPFetchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2322BECB540000BC00E /* IPFetchService.swift */; };
 		4938E2362BF13EAD000BC00E /* Hopoate in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2352BF13EAD000BC00E /* Hopoate */; };
 		4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2382BF13F75000BC00E /* Hopoate.swift */; };
+		4938E23F2BF2321E000BC00E /* RealmLocalStorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E23E2BF2321E000BC00E /* RealmLocalStorageManager.swift */; };
+		4938E2422BF234F3000BC00E /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2412BF234F3000BC00E /* RxCocoa */; };
+		4938E2442BF234F3000BC00E /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2432BF234F3000BC00E /* RxRelay */; };
+		4938E2462BF234F3000BC00E /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2452BF234F3000BC00E /* RxSwift */; };
+		4938E2492BF235B6000BC00E /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2482BF235B6000BC00E /* RealmSwift */; };
+		4938E24C2BF23641000BC00E /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E24B2BF23641000BC00E /* KeychainAccess */; };
+		4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E24D2BF237EB000BC00E /* KeychainStorage.swift */; };
+		4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
 		49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9170B2BDEDD5100188761 /* IPInputViewModel.swift */; };
-		49D9170E2BDEDD6100188761 /* IPInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9170D2BDEDD6100188761 /* IPInputModel.swift */; };
 		49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9170F2BDEDD7100188761 /* IPInputRouter.swift */; };
 		49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917132BDEDD9000188761 /* RouterProtocol.swift */; };
 		49D917162BDEE54000188761 /* IPInputView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D917152BDEE54000188761 /* IPInputView.storyboard */; };
-		96D09165C1FD47E56DD43B51 /* libPods-Arduino RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B5EF08116B43007CED008D1E /* libPods-Arduino RemoteTests.a */; };
-		A137405446F88236B72B0D12 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12DC440AA9F1D40A0C58FE09 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
-		FAE6DF0A53C9DE3B3824BFE3 /* libPods-Arduino Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B20F9A44DC99353F975B9C /* libPods-Arduino Remote.a */; };
+		742F973F0902360B47D49559 /* libPods-Arduino RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B97065A290957462ED81D6 /* libPods-Arduino RemoteTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +60,6 @@
 
 /* Begin PBXFileReference section */
 		0EFDE57497376E3467390B17 /* Pods-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino RemoteTests/Pods-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
-		12DC440AA9F1D40A0C58FE09 /* libPods-Arduino Remote-Arduino RemoteUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino Remote-Arduino RemoteUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		18B20F9A44DC99353F975B9C /* libPods-Arduino Remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino Remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2842BD6EF0800B0890E /* Arduino Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2872BD6EF0800B0890E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		491AD2892BD6EF0800B0890E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,11 +77,13 @@
 		4938E2302BEC0DA3000BC00E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		4938E2322BECB540000BC00E /* IPFetchService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IPFetchService.swift; sourceTree = "<group>"; };
 		4938E2382BF13F75000BC00E /* Hopoate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hopoate.swift; sourceTree = "<group>"; };
+		4938E23E2BF2321E000BC00E /* RealmLocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmLocalStorageManager.swift; sourceTree = "<group>"; };
+		4938E24D2BF237EB000BC00E /* KeychainStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStorage.swift; sourceTree = "<group>"; };
+		4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredIpAddressConfig.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
 		49D9170B2BDEDD5100188761 /* IPInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewModel.swift; sourceTree = "<group>"; };
-		49D9170D2BDEDD6100188761 /* IPInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputModel.swift; sourceTree = "<group>"; };
 		49D9170F2BDEDD7100188761 /* IPInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputRouter.swift; sourceTree = "<group>"; };
 		49D917132BDEDD9000188761 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		49D917152BDEE54000188761 /* IPInputView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IPInputView.storyboard; sourceTree = "<group>"; };
@@ -84,10 +91,12 @@
 		7BF6539A5203BB4B63ED03F5 /* Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F61E85275789546A0FFA4E2 /* Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteTests/Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		80BB1ECF7A34318BD44A8E9C /* Pods-Arduino RemoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino RemoteTests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino RemoteTests/Pods-Arduino RemoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino Remote-Arduino RemoteUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A7488CD9C141B79C99E8749 /* Pods-Arduino Remote-Arduino RemoteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteUITests.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests.release.xcconfig"; sourceTree = "<group>"; };
 		ADFB5189CAB10636DAB0BC50 /* Pods-Arduino Remote.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote.release.xcconfig"; sourceTree = "<group>"; };
-		B5EF08116B43007CED008D1E /* libPods-Arduino RemoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino RemoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDE26F7D0D037EC81B97AC42 /* libPods-Arduino Remote.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino Remote.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F468F1B70A224FD3C7847AFA /* Pods-Arduino Remote-Arduino RemoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteTests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteTests/Pods-Arduino Remote-Arduino RemoteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B97065A290957462ED81D6 /* libPods-Arduino RemoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Arduino RemoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +104,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE6DF0A53C9DE3B3824BFE3 /* libPods-Arduino Remote.a in Frameworks */,
+				4938E2492BF235B6000BC00E /* RealmSwift in Frameworks */,
+				4938E2422BF234F3000BC00E /* RxCocoa in Frameworks */,
+				4938E24C2BF23641000BC00E /* KeychainAccess in Frameworks */,
 				4938E2362BF13EAD000BC00E /* Hopoate in Frameworks */,
+				4938E2462BF234F3000BC00E /* RxSwift in Frameworks */,
+				4938E2442BF234F3000BC00E /* RxRelay in Frameworks */,
+				1A9E1549EB5F58B922760B27 /* libPods-Arduino Remote.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				96D09165C1FD47E56DD43B51 /* libPods-Arduino RemoteTests.a in Frameworks */,
+				742F973F0902360B47D49559 /* libPods-Arduino RemoteTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,7 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A137405446F88236B72B0D12 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */,
+				437D3ED115B7C0A93460BAE7 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,8 +198,19 @@
 			isa = PBXGroup;
 			children = (
 				4938E2382BF13F75000BC00E /* Hopoate.swift */,
+				4938E24D2BF237EB000BC00E /* KeychainStorage.swift */,
+				4938E23D2BF2320B000BC00E /* Realm */,
 			);
 			path = Data;
+			sourceTree = "<group>";
+		};
+		4938E23D2BF2320B000BC00E /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				4938E23E2BF2321E000BC00E /* RealmLocalStorageManager.swift */,
+				4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		49D917012BDEA72D00188761 /* Application */ = {
@@ -212,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				4938E2322BECB540000BC00E /* IPFetchService.swift */,
-				49D9170D2BDEDD6100188761 /* IPInputModel.swift */,
 				49D917092BDEDD4200188761 /* IPInputViewController.swift */,
 				49D917152BDEE54000188761 /* IPInputView.storyboard */,
 				49D9170B2BDEDD5100188761 /* IPInputViewModel.swift */,
@@ -266,9 +290,9 @@
 		FEE4F27B67173BCCF6223DD0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				18B20F9A44DC99353F975B9C /* libPods-Arduino Remote.a */,
-				12DC440AA9F1D40A0C58FE09 /* libPods-Arduino Remote-Arduino RemoteUITests.a */,
-				B5EF08116B43007CED008D1E /* libPods-Arduino RemoteTests.a */,
+				EDE26F7D0D037EC81B97AC42 /* libPods-Arduino Remote.a */,
+				9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */,
+				F7B97065A290957462ED81D6 /* libPods-Arduino RemoteTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -284,7 +308,7 @@
 				491AD2802BD6EF0800B0890E /* Sources */,
 				491AD2812BD6EF0800B0890E /* Frameworks */,
 				491AD2822BD6EF0800B0890E /* Resources */,
-				49B9E6F31F1CDA14404AD613 /* [CP] Copy Pods Resources */,
+				D7C8204A7FD68FE391D69901 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -293,6 +317,11 @@
 			name = "Arduino Remote";
 			packageProductDependencies = (
 				4938E2352BF13EAD000BC00E /* Hopoate */,
+				4938E2412BF234F3000BC00E /* RxCocoa */,
+				4938E2432BF234F3000BC00E /* RxRelay */,
+				4938E2452BF234F3000BC00E /* RxSwift */,
+				4938E2482BF235B6000BC00E /* RealmSwift */,
+				4938E24B2BF23641000BC00E /* KeychainAccess */,
 			);
 			productName = "Arduino Remote";
 			productReference = 491AD2842BD6EF0800B0890E /* Arduino Remote.app */;
@@ -306,7 +335,7 @@
 				491AD2962BD6EF0900B0890E /* Sources */,
 				491AD2972BD6EF0900B0890E /* Frameworks */,
 				491AD2982BD6EF0900B0890E /* Resources */,
-				C63D192D9328806F0C2A1112 /* [CP] Copy Pods Resources */,
+				EC17479EB4DA7281BC376E76 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -326,7 +355,7 @@
 				491AD2A02BD6EF0900B0890E /* Sources */,
 				491AD2A12BD6EF0900B0890E /* Frameworks */,
 				491AD2A22BD6EF0900B0890E /* Resources */,
-				0D25B9BCD5340C5AB5E57E55 /* [CP] Copy Pods Resources */,
+				9F1D468B641DEB387D179B67 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,6 +401,9 @@
 			mainGroup = 491AD27B2BD6EF0800B0890E;
 			packageReferences = (
 				4938E2342BF13EAD000BC00E /* XCRemoteSwiftPackageReference "hopoate" */,
+				4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */,
+				4938E2472BF235B6000BC00E /* XCRemoteSwiftPackageReference "realm-swift" */,
+				4938E24A2BF23641000BC00E /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 			);
 			productRefGroup = 491AD2852BD6EF0800B0890E /* Products */;
 			projectDirPath = "";
@@ -412,40 +444,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D25B9BCD5340C5AB5E57E55 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		49B9E6F31F1CDA14404AD613 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		4B756A3759C1D84D84A3A85D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -490,6 +488,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9F1D468B641DEB387D179B67 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B527B79D26090A6F1E2C887E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -512,7 +527,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C63D192D9328806F0C2A1112 /* [CP] Copy Pods Resources */ = {
+		D7C8204A7FD68FE391D69901 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC17479EB4DA7281BC376E76 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -536,6 +568,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */,
 				49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */,
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
@@ -543,14 +576,15 @@
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
 				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */,
+				4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */,
 				49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */,
 				4938E2332BECB540000BC00E /* IPFetchService.swift in Sources */,
 				491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */,
+				4938E23F2BF2321E000BC00E /* RealmLocalStorageManager.swift in Sources */,
 				49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */,
 				4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
-				49D9170E2BDEDD6100188761 /* IPInputModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -927,6 +961,30 @@
 				minimumVersion = 1.10.0;
 			};
 		};
+		4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		4938E2472BF235B6000BC00E /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		4938E24A2BF23641000BC00E /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -934,6 +992,31 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 4938E2342BF13EAD000BC00E /* XCRemoteSwiftPackageReference "hopoate" */;
 			productName = Hopoate;
+		};
+		4938E2412BF234F3000BC00E /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		4938E2432BF234F3000BC00E /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		4938E2452BF234F3000BC00E /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2402BF23425000BC00E /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		4938E2482BF235B6000BC00E /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E2472BF235B6000BC00E /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+		4938E24B2BF23641000BC00E /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4938E24A2BF23641000BC00E /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

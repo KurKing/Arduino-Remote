@@ -10,6 +10,16 @@ import Foundation
 extension String {
     
     var trimmed: String { trimmingCharacters(in: .whitespacesAndNewlines) }
+    var emptyToNil: String? {
+        
+        let trimmed = self.trimmed
+        
+        if trimmed.isEmpty {
+            return nil
+        }
+        
+        return trimmed
+    }
 }
 
 // MARK: - Regex

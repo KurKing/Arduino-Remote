@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        DependencyContainer.shared.register(AlamofireApiManager(), for: ApiManager.self)
+        register(AlamofireApiManager(), for: ApiManager.self)
+        register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
         
         return true
     }
