@@ -25,8 +25,7 @@ class RootViewController: UIViewController {
             
             isInitiated = true
         } else {
-            
-            
+            presentChildViews()
         }
     }
     

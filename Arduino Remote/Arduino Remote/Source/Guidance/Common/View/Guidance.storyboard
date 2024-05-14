@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -32,19 +33,36 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cx3-NH-cKl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5QZ-Lb-eL9">
+                        <barButtonItem key="rightBarButtonItem" image="play.fill" catalog="system" id="5QZ-Lb-eL9">
+                            <color key="tintColor" name="Medium Sky Blue"/>
                             <connections>
-                                <action selector="addButtonTapped:" destination="Y6W-OH-hqX" id="ecQ-R8-wDP"/>
+                                <action selector="playButtonTapped:" destination="Y6W-OH-hqX" id="Vy6-vV-leD"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="playButton" destination="5QZ-Lb-eL9" id="NQd-11-h8C"/>
                         <outlet property="spriteKitView" destination="wXV-Rs-cUz" id="haM-Dq-2Iu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-28.169014084507044"/>
+            <point key="canvasLocation" x="851" y="-34"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MOO-po-c7H">
+            <objects>
+                <viewController id="X3K-P4-N8F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cY8-n9-hOP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SwK-Ou-a9J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSy-0v-4cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="-28"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q2Q-Rs-Wny">
@@ -66,8 +84,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
         <namedColor name="Dark Midnight Blue">
             <color red="0.0" green="0.12156863510608673" blue="0.16862747073173523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Medium Sky Blue">
+            <color red="0.46666666865348816" green="0.92156863212585449" blue="0.94509804248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

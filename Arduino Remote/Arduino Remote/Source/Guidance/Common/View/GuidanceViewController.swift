@@ -29,8 +29,10 @@ extension GuidanceViewController {
 class GuidanceViewController: UIViewController {
     
     @IBOutlet weak var spriteKitView: SKView!
+    @IBOutlet weak var playButton: UIBarButtonItem!
     private var scene: ContollerScene!
     
+    private var mode = GuidanceMode.edit
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -44,14 +46,29 @@ class GuidanceViewController: UIViewController {
             .subscribe(onNext: { [weak self] rect in
                 self?.scene?.size = rect.size
             }).disposed(by: disposeBag)
+        scene.size = spriteKitView.bounds.size
         
-        
-        scene.touchesDelegateStrategy = CreationModeTouchesDelegateStrategy()
+        scene.touchesDelegateStrategy = EditModeTouchesDelegateStrategy()
     }
     
     
-    @IBAction func addButtonTapped(_ sender: Any) {
+    @IBAction func playButtonTapped(_ sender: Any) {
         
+        mode = mode.inverted
         
+        playButton.image = mode.buttonImage
+        scene.touchesDelegateStrategy = mode.touchesStrategy
+    }
+}
+
+private extension GuidanceMode {
+    
+    var buttonImage: UIImage {
+        switch self {
+        case .edit:
+            return UIImage(systemName: "play.fill")!
+        case .action:
+            return UIImage(systemName: "pause.fill")!
+        }
     }
 }

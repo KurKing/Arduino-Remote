@@ -38,7 +38,7 @@
 		4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938E25F2BF29ABC000BC00E /* Guidance.storyboard */; };
 		4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4938E2652BF38EE5000BC00E /* ContollerScene.sks */; };
 		4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2672BF38EF2000BC00E /* ContollerScene.swift */; };
-		4938E28F2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */; };
+		4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -46,6 +46,10 @@
 		49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D9170F2BDEDD7100188761 /* IPInputRouter.swift */; };
 		49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917132BDEDD9000188761 /* RouterProtocol.swift */; };
 		49D917162BDEE54000188761 /* IPInputView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49D917152BDEE54000188761 /* IPInputView.storyboard */; };
+		49E0DFA72BF3A5D3002EC1D8 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2482BF235B6000BC00E /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		49E0DFA92BF3A5D5002EC1D8 /* Hopoate in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2352BF13EAD000BC00E /* Hopoate */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		49E0DFB22BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */; };
+		49E0DFB42BF3AD6F002EC1D8 /* GuidanceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */; };
 		742F973F0902360B47D49559 /* libPods-Arduino RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B97065A290957462ED81D6 /* libPods-Arduino RemoteTests.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +69,21 @@
 			remoteInfo = "Arduino Remote";
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49E0DFA82BF3A5D3002EC1D8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49E0DFA72BF3A5D3002EC1D8 /* RealmSwift in Embed Frameworks */,
+				49E0DFA92BF3A5D5002EC1D8 /* Hopoate in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0EFDE57497376E3467390B17 /* Pods-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino RemoteTests/Pods-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,7 +113,7 @@
 		4938E25F2BF29ABC000BC00E /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
 		4938E2652BF38EE5000BC00E /* ContollerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ContollerScene.sks; sourceTree = "<group>"; };
 		4938E2672BF38EF2000BC00E /* ContollerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContollerScene.swift; sourceTree = "<group>"; };
-		4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
+		4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +121,8 @@
 		49D9170F2BDEDD7100188761 /* IPInputRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputRouter.swift; sourceTree = "<group>"; };
 		49D917132BDEDD9000188761 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		49D917152BDEE54000188761 /* IPInputView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IPInputView.storyboard; sourceTree = "<group>"; };
+		49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
+		49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceMode.swift; sourceTree = "<group>"; };
 		63ACE826165F6744BE8E533F /* Pods-Arduino Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF6539A5203BB4B63ED03F5 /* Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F61E85275789546A0FFA4E2 /* Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteTests/Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -232,11 +253,9 @@
 		4938E2582BF29970000BC00E /* Guidance */ = {
 			isa = PBXGroup;
 			children = (
-				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
-				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
-				4938E2652BF38EE5000BC00E /* ContollerScene.sks */,
-				4938E2672BF38EF2000BC00E /* ContollerScene.swift */,
-				4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */,
+				49E0DFAC2BF3AC46002EC1D8 /* Common */,
+				49E0DFAB2BF3AC05002EC1D8 /* Action mode */,
+				49E0DFAA2BF3ABFC002EC1D8 /* Edit mode */,
 			);
 			path = Guidance;
 			sourceTree = "<group>";
@@ -303,6 +322,66 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
+		49E0DFAA2BF3ABFC002EC1D8 /* Edit mode */ = {
+			isa = PBXGroup;
+			children = (
+				4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */,
+			);
+			path = "Edit mode";
+			sourceTree = "<group>";
+		};
+		49E0DFAB2BF3AC05002EC1D8 /* Action mode */ = {
+			isa = PBXGroup;
+			children = (
+				49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */,
+			);
+			path = "Action mode";
+			sourceTree = "<group>";
+		};
+		49E0DFAC2BF3AC46002EC1D8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				49E0DFAE2BF3AC5F002EC1D8 /* Model */,
+				49E0DFB02BF3AC71002EC1D8 /* View */,
+				49E0DFAF2BF3AC64002EC1D8 /* View model */,
+				49E0DFAD2BF3AC56002EC1D8 /* Scene */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		49E0DFAD2BF3AC56002EC1D8 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				4938E2652BF38EE5000BC00E /* ContollerScene.sks */,
+				4938E2672BF38EF2000BC00E /* ContollerScene.swift */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		49E0DFAE2BF3AC5F002EC1D8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		49E0DFAF2BF3AC64002EC1D8 /* View model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View model";
+			sourceTree = "<group>";
+		};
+		49E0DFB02BF3AC71002EC1D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
+				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		940F8665D516D8DFE4D989DC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -340,6 +419,7 @@
 				491AD2812BD6EF0800B0890E /* Frameworks */,
 				491AD2822BD6EF0800B0890E /* Resources */,
 				D7C8204A7FD68FE391D69901 /* [CP] Copy Pods Resources */,
+				49E0DFA82BF3A5D3002EC1D8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -610,16 +690,18 @@
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
-				4938E28F2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift in Sources */,
+				4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */,
 				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */,
 				4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */,
 				49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */,
+				49E0DFB22BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift in Sources */,
 				4938E2332BECB540000BC00E /* IPFetchService.swift in Sources */,
 				491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */,
 				4938E23F2BF2321E000BC00E /* RealmLocalStorageManager.swift in Sources */,
 				49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */,
 				4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */,
+				49E0DFB42BF3AD6F002EC1D8 /* GuidanceMode.swift in Sources */,
 				4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */,
 				4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
@@ -813,7 +895,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -849,7 +930,6 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

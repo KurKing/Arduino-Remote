@@ -1,5 +1,5 @@
 //
-//  CreationModeTouchesDelegateStrategy.swift
+//  EditModeTouchesDelegateStrategy.swift
 //  Arduino Remote
 //
 //  Created by Oleksii on 14.05.2024.
@@ -8,11 +8,12 @@
 import Foundation
 import SpriteKit
 
-class CreationModeTouchesDelegateStrategy: TouchesDelegateStrategy {
+class EditModeTouchesDelegateStrategy: TouchesDelegateStrategy {
     
     weak var scene: SKScene?
-    
-    private var buttonSize: CGFloat { 60 }
+
+    // !!! buttonSize % 2 = 0
+    private var buttonSize: CGFloat { 100 }
     
     private var rectNode: SKShapeNode {
         
@@ -49,9 +50,9 @@ class CreationModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         
         if let selectedNode = selectedNode {
 
-            selectedNode.move(to: transform(location: location))
-            
-            selectedNodeWasEverMoved = true
+            if selectedNode.move(to: transform(location: location)) {
+                selectedNodeWasEverMoved = true
+            }
         }
     }
     
@@ -80,7 +81,7 @@ class CreationModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         var X = min(max(location.x, 0), scene.size.width)
         var Y = min(max(location.y, 0), scene.size.height)
         
-        let divider: CGFloat = 20
+        let divider: CGFloat = buttonSize / 2
         X = round(X / divider) * divider
         Y = round(Y / divider) * divider
 
@@ -90,11 +91,18 @@ class CreationModeTouchesDelegateStrategy: TouchesDelegateStrategy {
 
 private extension SKNode {
     
-    func move(to location: CGPoint) {
+    @discardableResult
+    func move(to location: CGPoint) -> Bool {
+        
+        if position == location {
+            return false
+        }
         
         let time = moveTime(from: position, to: location)
         
         run(SKAction.move(to: location, duration: time))
+        
+        return true
     }
     
     private func moveTime(from start: CGPoint, to finish: CGPoint) -> TimeInterval {
