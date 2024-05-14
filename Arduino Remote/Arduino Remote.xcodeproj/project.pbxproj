@@ -38,6 +38,7 @@
 		4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938E25F2BF29ABC000BC00E /* Guidance.storyboard */; };
 		4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4938E2652BF38EE5000BC00E /* ContollerScene.sks */; };
 		4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2672BF38EF2000BC00E /* ContollerScene.swift */; };
+		4938E28F2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -93,6 +94,7 @@
 		4938E25F2BF29ABC000BC00E /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
 		4938E2652BF38EE5000BC00E /* ContollerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ContollerScene.sks; sourceTree = "<group>"; };
 		4938E2672BF38EF2000BC00E /* ContollerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContollerScene.swift; sourceTree = "<group>"; };
+		4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreationModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
 				4938E2652BF38EE5000BC00E /* ContollerScene.sks */,
 				4938E2672BF38EF2000BC00E /* ContollerScene.swift */,
+				4938E28E2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift */,
 			);
 			path = Guidance;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
+				4938E28F2BF39AB8000BC00E /* CreationModeTouchesDelegateStrategy.swift in Sources */,
 				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */,
 				4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */,

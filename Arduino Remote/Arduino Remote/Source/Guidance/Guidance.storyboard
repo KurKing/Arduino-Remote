@@ -32,7 +32,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cx3-NH-cKl">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5QZ-Lb-eL9"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="5QZ-Lb-eL9">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="Y6W-OH-hqX" id="ecQ-R8-wDP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="spriteKitView" destination="wXV-Rs-cUz" id="haM-Dq-2Iu"/>

@@ -29,7 +29,7 @@ extension GuidanceViewController {
 class GuidanceViewController: UIViewController {
     
     @IBOutlet weak var spriteKitView: SKView!
-    private var scene: SKScene!
+    private var scene: ContollerScene!
     
     private let disposeBag = DisposeBag()
     
@@ -44,5 +44,14 @@ class GuidanceViewController: UIViewController {
             .subscribe(onNext: { [weak self] rect in
                 self?.scene?.size = rect.size
             }).disposed(by: disposeBag)
+        
+        
+        scene.touchesDelegateStrategy = CreationModeTouchesDelegateStrategy()
+    }
+    
+    
+    @IBAction func addButtonTapped(_ sender: Any) {
+        
+        
     }
 }
