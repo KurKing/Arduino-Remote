@@ -34,6 +34,10 @@
 		4938E2532BF26132000BC00E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2522BF26132000BC00E /* SVProgressHUD */; };
 		4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2542BF26159000BC00E /* LoadingIndicator.swift */; };
 		4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2562BF269C9000BC00E /* IPInputModel.swift */; };
+		4938E25E2BF29A8E000BC00E /* GuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */; };
+		4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938E25F2BF29ABC000BC00E /* Guidance.storyboard */; };
+		4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4938E2652BF38EE5000BC00E /* ContollerScene.sks */; };
+		4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2672BF38EF2000BC00E /* ContollerScene.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -85,6 +89,10 @@
 		4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredIpAddressConfig.swift; sourceTree = "<group>"; };
 		4938E2542BF26159000BC00E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		4938E2562BF269C9000BC00E /* IPInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputModel.swift; sourceTree = "<group>"; };
+		4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceViewController.swift; sourceTree = "<group>"; };
+		4938E25F2BF29ABC000BC00E /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
+		4938E2652BF38EE5000BC00E /* ContollerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ContollerScene.sks; sourceTree = "<group>"; };
+		4938E2672BF38EF2000BC00E /* ContollerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContollerScene.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -219,6 +227,17 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
+		4938E2582BF29970000BC00E /* Guidance */ = {
+			isa = PBXGroup;
+			children = (
+				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
+				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
+				4938E2652BF38EE5000BC00E /* ContollerScene.sks */,
+				4938E2672BF38EF2000BC00E /* ContollerScene.swift */,
+			);
+			path = Guidance;
+			sourceTree = "<group>";
+		};
 		49D917012BDEA72D00188761 /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				49D917112BDEDD7B00188761 /* Common */,
+				4938E2582BF29970000BC00E /* Guidance */,
 				49D917032BDEB43900188761 /* IPFetcher */,
 			);
 			path = Source;
@@ -432,7 +452,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */,
+				4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */,
 				49D917162BDEE54000188761 /* IPInputView.storyboard in Resources */,
+				4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */,
 				491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -595,7 +617,9 @@
 				49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */,
 				4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */,
 				4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */,
+				4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
+				4938E25E2BF29A8E000BC00E /* GuidanceViewController.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
