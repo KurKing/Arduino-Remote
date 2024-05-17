@@ -41,6 +41,7 @@ class GuidanceViewController: UIViewController {
         
         spriteKitView.presentScene(scene)
         
+        
         spriteKitView.rx.observe(CGRect.self, "bounds")
             .compactMap({ $0 })
             .subscribe(onNext: { [weak self] rect in

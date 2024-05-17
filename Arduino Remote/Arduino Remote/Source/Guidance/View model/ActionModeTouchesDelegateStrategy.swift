@@ -24,14 +24,17 @@ class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         
         guard let scene = scene,
               let location = touches.first?.location(in: scene),
-              let _ = scene.nodes(at: location).first else {
+              let button = scene.nodes(at: location)
+                            .compactMap({ $0 as? ButtonNode })
+                            .first else {
             return
         }
 
+        button.blynkAnimation()
         ledIsOn.toggle()
         
         resolve(ApiManager.self)
-            .ledRequest(isOn: ledIsOn)
+            .ledRequest(pin: button.pinNumber, isOn: ledIsOn)
             .subscribe(onNext: { _ in
                 
                 print("[ACTION MODE] Led toggled")

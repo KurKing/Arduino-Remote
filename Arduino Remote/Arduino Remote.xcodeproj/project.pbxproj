@@ -39,6 +39,8 @@
 		4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4938E2652BF38EE5000BC00E /* ContollerScene.sks */; };
 		4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2672BF38EF2000BC00E /* ContollerScene.swift */; };
 		4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */; };
+		49755ADB2BF7836E0032AA1D /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49755ADA2BF7836E0032AA1D /* MockApiManager.swift */; };
+		49755ADD2BF7B72B0032AA1D /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49755ADC2BF7B72B0032AA1D /* ButtonNode.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -114,6 +116,8 @@
 		4938E2652BF38EE5000BC00E /* ContollerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ContollerScene.sks; sourceTree = "<group>"; };
 		4938E2672BF38EF2000BC00E /* ContollerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContollerScene.swift; sourceTree = "<group>"; };
 		4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
+		49755ADA2BF7836E0032AA1D /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
+		49755ADC2BF7B72B0032AA1D /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -253,9 +257,9 @@
 		4938E2582BF29970000BC00E /* Guidance */ = {
 			isa = PBXGroup;
 			children = (
-				49E0DFAC2BF3AC46002EC1D8 /* Common */,
-				49E0DFAB2BF3AC05002EC1D8 /* Action mode */,
-				49E0DFAA2BF3ABFC002EC1D8 /* Edit mode */,
+				49E0DFAE2BF3AC5F002EC1D8 /* Model */,
+				49E0DFB02BF3AC71002EC1D8 /* View */,
+				49E0DFAF2BF3AC64002EC1D8 /* View model */,
 			);
 			path = Guidance;
 			sourceTree = "<group>";
@@ -298,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				49D917072BDEB49300188761 /* ApiManager.swift */,
+				49755ADA2BF7836E0032AA1D /* MockApiManager.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -322,38 +327,12 @@
 			path = UI;
 			sourceTree = "<group>";
 		};
-		49E0DFAA2BF3ABFC002EC1D8 /* Edit mode */ = {
-			isa = PBXGroup;
-			children = (
-				4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */,
-			);
-			path = "Edit mode";
-			sourceTree = "<group>";
-		};
-		49E0DFAB2BF3AC05002EC1D8 /* Action mode */ = {
-			isa = PBXGroup;
-			children = (
-				49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */,
-			);
-			path = "Action mode";
-			sourceTree = "<group>";
-		};
-		49E0DFAC2BF3AC46002EC1D8 /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				49E0DFAE2BF3AC5F002EC1D8 /* Model */,
-				49E0DFB02BF3AC71002EC1D8 /* View */,
-				49E0DFAF2BF3AC64002EC1D8 /* View model */,
-				49E0DFAD2BF3AC56002EC1D8 /* Scene */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		49E0DFAD2BF3AC56002EC1D8 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				4938E2652BF38EE5000BC00E /* ContollerScene.sks */,
 				4938E2672BF38EF2000BC00E /* ContollerScene.swift */,
+				49755ADC2BF7B72B0032AA1D /* ButtonNode.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -369,6 +348,8 @@
 		49E0DFAF2BF3AC64002EC1D8 /* View model */ = {
 			isa = PBXGroup;
 			children = (
+				49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */,
+				4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -376,6 +357,7 @@
 		49E0DFB02BF3AC71002EC1D8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				49E0DFAD2BF3AC56002EC1D8 /* Scene */,
 				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
 				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
 			);
@@ -683,8 +665,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49755ADB2BF7836E0032AA1D /* MockApiManager.swift in Sources */,
 				4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */,
 				4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */,
+				49755ADD2BF7B72B0032AA1D /* ButtonNode.swift in Sources */,
 				49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */,
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,

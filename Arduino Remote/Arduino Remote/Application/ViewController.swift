@@ -47,7 +47,7 @@ class ViewController: UIViewController {
         
         toggle.toggle()
         
-        resolve(ApiManager.self).ledRequest(isOn: toggle)
+        resolve(ApiManager.self).ledRequest(pin: 3, isOn: toggle)
             .subscribe(onNext: { [weak self] _ in
                 
                 self?.view.backgroundColor = [UIColor.yellow, 

@@ -20,7 +20,7 @@ protocol ApiManager {
     func configure(with ip: String)
     
     func healthCheck() -> Observable<Void>
-    func ledRequest(isOn: Bool) -> Observable<Void>
+    func ledRequest(pin: Int, isOn: Bool) -> Observable<Void>
 }
 
 final class AlamofireApiManager: ApiManager {
@@ -37,11 +37,12 @@ final class AlamofireApiManager: ApiManager {
         request(path: "/", timeoutInterval: 3).map({ (_: EmptyResponse) in () })
     }
     
-    func ledRequest(isOn: Bool) -> Observable<Void> {
+    func ledRequest(pin: Int, isOn: Bool) -> Observable<Void> {
         
         request(path: "/led",
                 method: .post,
-                parameters: ["is_on": (isOn ? "true" : "false")])
+                parameters: ["is_on": (isOn ? "true" : "false"),
+                             "pin": pin])
         .map({ (_: EmptyResponse) in () })
     }
     
