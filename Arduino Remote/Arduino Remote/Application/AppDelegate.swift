@@ -16,8 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         register(AlamofireApiManager(), for: ApiManager.self)
+//        register(MockApiManager(), for: ApiManager.self)
         register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
         register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
+        
+        UINavigationBar.setupDefaultAppearance()
         
         return true
     }

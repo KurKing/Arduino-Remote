@@ -26,12 +26,14 @@ class RootViewController: UIViewController {
             isInitiated = true
         } else {
             
-            
+            guard ipFetcher == nil else { return }
+            presentChildViews()
         }
     }
     
     private func presentChildViews() {
         
-        
+        navigationController?.pushViewController(GuidanceViewController.instantiate(),
+                                                 animated: true)
     }
 }
