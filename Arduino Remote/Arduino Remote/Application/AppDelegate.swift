@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Hopoate
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -13,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, 
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        register(AlamofireApiManager(), for: ApiManager.self)
+//        register(MockApiManager(), for: ApiManager.self)
+        register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
+        register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
+        
+        UINavigationBar.setupDefaultAppearance()
+        
         return true
     }
 

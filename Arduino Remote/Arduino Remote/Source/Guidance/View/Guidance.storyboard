@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Guidance View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="GuidanceViewController" id="Y6W-OH-hqX" customClass="GuidanceViewController" customModule="Arduino_Remote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <skView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXV-Rs-cUz">
+                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </skView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" name="Dark Midnight Blue"/>
+                        <constraints>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="wXV-Rs-cUz" secondAttribute="trailing" id="227-aC-daR"/>
+                            <constraint firstItem="wXV-Rs-cUz" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Wzf-y1-TGj"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="wXV-Rs-cUz" secondAttribute="bottom" id="baC-DL-sSQ"/>
+                            <constraint firstItem="wXV-Rs-cUz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="cT3-18-9WB"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="cx3-NH-cKl">
+                        <barButtonItem key="rightBarButtonItem" image="play.fill" catalog="system" id="5QZ-Lb-eL9">
+                            <color key="tintColor" name="Medium Sky Blue"/>
+                            <connections>
+                                <action selector="playButtonTapped:" destination="Y6W-OH-hqX" id="Vy6-vV-leD"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="playButton" destination="5QZ-Lb-eL9" id="NQd-11-h8C"/>
+                        <outlet property="spriteKitView" destination="wXV-Rs-cUz" id="haM-Dq-2Iu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="851" y="-34"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="MOO-po-c7H">
+            <objects>
+                <viewController id="X3K-P4-N8F" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cY8-n9-hOP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="SwK-Ou-a9J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pSy-0v-4cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717" y="-28"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="q2Q-Rs-Wny">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZYY-5p-sYq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="daV-O6-BvJ">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="0qD-hX-lfa"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y3c-Dc-eOr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130.53435114503816" y="-28.169014084507044"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="play.fill" catalog="system" width="117" height="128"/>
+        <namedColor name="Dark Midnight Blue">
+            <color red="0.0" green="0.12156863510608673" blue="0.16862747073173523" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Medium Sky Blue">
+            <color red="0.46666666865348816" green="0.92156863212585449" blue="0.94509804248809814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
