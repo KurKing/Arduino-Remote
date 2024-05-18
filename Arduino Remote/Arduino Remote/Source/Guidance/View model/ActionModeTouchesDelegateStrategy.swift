@@ -12,8 +12,6 @@ import RxSwift
 class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
     
     weak var scene: SKScene?
-    
-    private var ledIsOn = false
     private let disposeBag = DisposeBag()
 
     func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { /*...*/ }
@@ -31,10 +29,10 @@ class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         }
 
         button.blynkAnimation()
-        ledIsOn.toggle()
+        button.isOn.toggle()
         
         resolve(ApiManager.self)
-            .ledRequest(pin: button.pinNumber, isOn: ledIsOn)
+            .ledRequest(pin: button.pinNumber, isOn: button.isOn)
             .subscribe(onNext: { _ in
                 
                 print("[ACTION MODE] Led toggled")

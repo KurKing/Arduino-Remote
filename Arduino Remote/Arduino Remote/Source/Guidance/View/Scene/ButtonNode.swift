@@ -31,12 +31,14 @@ class ButtonNode: SKShapeNode {
     private weak var circle: SKShapeNode?
     private weak var label: SKLabelNode?
     
-    private static var maxPinNumber: Int { 5 }
+    private static var maxPinNumber: Int { 15 }
     var pinNumber = 0 {
         didSet {
             label?.text = "P\(pinNumber)"
         }
     }
+    
+    var isOn = false
     
     override var strokeColor: UIColor {
         get { super.strokeColor }

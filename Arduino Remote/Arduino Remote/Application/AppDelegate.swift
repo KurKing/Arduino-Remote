@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-//        register(AlamofireApiManager(), for: ApiManager.self)
-        register(MockApiManager(), for: ApiManager.self)
+        register(AlamofireApiManager(), for: ApiManager.self)
+//        register(MockApiManager(), for: ApiManager.self)
         register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
         register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
         

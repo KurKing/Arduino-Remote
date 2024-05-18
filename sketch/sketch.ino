@@ -11,6 +11,7 @@ ESP8266WebServer server(80);
 void setup() {
 
   Serial.begin(115200);
+  Serial.println("Loading...");
 
   pinMode(LED, OUTPUT);
   pinMode(INPUT_PIN, INPUT);
@@ -48,7 +49,7 @@ void handleReadInput() {
   doc["input_pin_state"] = digitalRead(INPUT_PIN);
 
   String response;
-  serializeJsondoc, response);
+  serializeJson(doc, response);
   server.send(200, "application/json", response);
 }
 
@@ -56,7 +57,12 @@ void handleReadInput() {
 void handleLed() {
 
   bool isOn = server.arg("is_on") == "true";
-  digitalWrite(LED, isOn ? HIGH : LOW);
+  int pinNumber = server.arg("pin").toInt();
+
+  Serial.println(pinNumber);
+
+  pinMode(pinNumber, OUTPUT);
+  digitalWrite(pinNumber, isOn ? HIGH : LOW);
 
   sendSuccessEmptyResponse();
 }

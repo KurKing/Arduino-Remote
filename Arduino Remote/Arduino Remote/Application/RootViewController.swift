@@ -25,6 +25,8 @@ class RootViewController: UIViewController {
             
             isInitiated = true
         } else {
+            
+            guard ipFetcher == nil else { return }
             presentChildViews()
         }
     }
