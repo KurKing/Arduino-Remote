@@ -41,6 +41,7 @@
 		4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */; };
 		49755ADB2BF7836E0032AA1D /* MockApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49755ADA2BF7836E0032AA1D /* MockApiManager.swift */; };
 		49755ADD2BF7B72B0032AA1D /* ButtonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49755ADC2BF7B72B0032AA1D /* ButtonNode.swift */; };
+		49755ADF2BF8EA4A0032AA1D /* UINavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49755ADE2BF8EA4A0032AA1D /* UINavigationBar.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
 		49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917092BDEDD4200188761 /* IPInputViewController.swift */; };
@@ -118,6 +119,7 @@
 		4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
 		49755ADA2BF7836E0032AA1D /* MockApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiManager.swift; sourceTree = "<group>"; };
 		49755ADC2BF7B72B0032AA1D /* ButtonNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonNode.swift; sourceTree = "<group>"; };
+		49755ADE2BF8EA4A0032AA1D /* UINavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UINavigationBar.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 		49D917092BDEDD4200188761 /* IPInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputViewController.swift; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 			children = (
 				49D917132BDEDD9000188761 /* RouterProtocol.swift */,
 				4938E2542BF26159000BC00E /* LoadingIndicator.swift */,
+				49755ADE2BF8EA4A0032AA1D /* UINavigationBar.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -689,6 +692,7 @@
 				4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */,
 				4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
+				49755ADF2BF8EA4A0032AA1D /* UINavigationBar.swift in Sources */,
 				4938E25E2BF29A8E000BC00E /* GuidanceViewController.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
 			);

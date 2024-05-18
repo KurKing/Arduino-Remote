@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
         register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
         
-        UINavigationBar.appearance().tintColor = .mediumSkyBlue
-
+        UINavigationBar.setupDefaultAppearance()
+        
         return true
     }
 

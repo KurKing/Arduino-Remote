@@ -39,8 +39,9 @@ class GuidanceViewController: UIViewController {
         
         super.viewDidLoad()
         
-        spriteKitView.presentScene(scene)
+        title = "Scheme"
         
+        spriteKitView.presentScene(scene)
         
         spriteKitView.rx.observe(CGRect.self, "bounds")
             .compactMap({ $0 })
