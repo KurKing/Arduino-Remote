@@ -7,12 +7,15 @@
 
 import Foundation
 import SpriteKit
-import RxSwift
 
 class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
     
     weak var scene: SKScene?
-    private let disposeBag = DisposeBag()
+    private let model: ActionModeModelProtocol
+    
+    init(model: ActionModeModelProtocol = ActionModeModel()) {
+        self.model = model
+    }
 
     func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) { /*...*/ }
     
@@ -31,14 +34,6 @@ class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         button.blynkAnimation()
         button.isOn.toggle()
         
-        resolve(ApiManager.self)
-            .ledRequest(pin: button.pinNumber, isOn: button.isOn)
-            .subscribe(onNext: { _ in
-                
-                print("[ACTION MODE] Led toggled")
-            }, onError: { error in
-                
-                print("[ACTION MODE] \(error.localizedDescription)")
-            }).disposed(by: disposeBag)
+        model.sendLedRequest(pin: button.pinNumber, isOn: button.isOn)
     }
 }
