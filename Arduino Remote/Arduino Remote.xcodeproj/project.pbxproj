@@ -11,7 +11,6 @@
 		437D3ED115B7C0A93460BAE7 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
 		491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2872BD6EF0800B0890E /* AppDelegate.swift */; };
 		491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2892BD6EF0800B0890E /* SceneDelegate.swift */; };
-		491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD28B2BD6EF0800B0890E /* ViewController.swift */; };
 		491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2902BD6EF0900B0890E /* Assets.xcassets */; };
 		491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */; };
 		491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */; };
@@ -94,7 +93,6 @@
 		491AD2842BD6EF0800B0890E /* Arduino Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2872BD6EF0800B0890E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		491AD2892BD6EF0800B0890E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		491AD28B2BD6EF0800B0890E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		491AD2902BD6EF0900B0890E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		491AD2932BD6EF0900B0890E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491AD2952BD6EF0900B0890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -274,7 +272,6 @@
 				491AD2872BD6EF0800B0890E /* AppDelegate.swift */,
 				491AD2892BD6EF0800B0890E /* SceneDelegate.swift */,
 				4938E2302BEC0DA3000BC00E /* RootViewController.swift */,
-				491AD28B2BD6EF0800B0890E /* ViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -681,7 +678,6 @@
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
 				4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */,
-				491AD28C2BD6EF0800B0890E /* ViewController.swift in Sources */,
 				4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */,
 				4938E24E2BF237EB000BC00E /* KeychainStorage.swift in Sources */,
 				49D9170A2BDEDD4200188761 /* IPInputViewController.swift in Sources */,
