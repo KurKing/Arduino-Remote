@@ -8,6 +8,12 @@
 import Foundation
 import SpriteKit
 
+enum ButtonNodeMode {
+    
+    case buttonSwitch
+    case oneClick
+}
+
 extension ButtonNode {
     
     class func instantiate(location: CGPoint) -> ButtonNode {
@@ -39,6 +45,7 @@ class ButtonNode: SKShapeNode {
     }
     
     var isOn = false
+    var mode = ButtonNodeMode.buttonSwitch
     
     override var strokeColor: UIColor {
         get { super.strokeColor }

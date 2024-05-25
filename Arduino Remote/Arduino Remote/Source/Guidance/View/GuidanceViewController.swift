@@ -50,7 +50,7 @@ class GuidanceViewController: UIViewController {
             }).disposed(by: disposeBag)
         scene.size = spriteKitView.bounds.size
         
-        scene.touchesDelegateStrategy = EditModeTouchesDelegateStrategy()
+        setupMode()
     }
     
     
@@ -58,8 +58,13 @@ class GuidanceViewController: UIViewController {
         
         mode = mode.inverted
         
+        setupMode()
+    }
+    
+    private func setupMode() {
+        
         playButton.image = mode.buttonImage
-        scene.touchesDelegateStrategy = mode.touchesStrategy
+        scene.touchesDelegateStrategy = mode.touchesStrategy(presenter: self)
     }
 }
 
@@ -72,5 +77,30 @@ private extension GuidanceMode {
         case .action:
             return UIImage(systemName: "pause.fill")!
         }
+    }
+}
+
+// MARK: Menu presenter
+extension GuidanceViewController: EditModeMenuPresenter {
+    
+    func present(menu: UIViewController, position: CGPoint) {
+        
+        menu.modalPresentationStyle = .popover
+        menu.preferredContentSize = .init(width: 300, height: 300)
+        menu.popoverPresentationController?.sourceView = spriteKitView
+        menu.popoverPresentationController?.sourceRect = CGRect(origin: position,
+                                                                size: .zero)
+        menu.popoverPresentationController?.permittedArrowDirections = [.up, .down]
+        menu.popoverPresentationController?.delegate = self
+
+        present(menu, animated: true)
+    }
+}
+
+extension GuidanceViewController: UIPopoverPresentationControllerDelegate {
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController, 
+                                   traitCollection: UITraitCollection) -> UIModalPresentationStyle {
+        .none
     }
 }

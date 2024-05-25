@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A9E1549EB5F58B922760B27 /* libPods-Arduino Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26F7D0D037EC81B97AC42 /* libPods-Arduino Remote.a */; };
 		437D3ED115B7C0A93460BAE7 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
+		490551432C0220FD00A3EF29 /* ButtonEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */; };
 		491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2872BD6EF0800B0890E /* AppDelegate.swift */; };
 		491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2892BD6EF0800B0890E /* SceneDelegate.swift */; };
 		491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2902BD6EF0900B0890E /* Assets.xcassets */; };
@@ -90,6 +91,7 @@
 
 /* Begin PBXFileReference section */
 		0EFDE57497376E3467390B17 /* Pods-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino RemoteTests/Pods-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
+		490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEditViewController.swift; sourceTree = "<group>"; };
 		491AD2842BD6EF0800B0890E /* Arduino Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2872BD6EF0800B0890E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		491AD2892BD6EF0800B0890E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -363,6 +365,7 @@
 				49E0DFAD2BF3AC56002EC1D8 /* Scene */,
 				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
 				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
+				490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -674,6 +677,7 @@
 				49755ADD2BF7B72B0032AA1D /* ButtonNode.swift in Sources */,
 				49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */,
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
+				490551432C0220FD00A3EF29 /* ButtonEditViewController.swift in Sources */,
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,

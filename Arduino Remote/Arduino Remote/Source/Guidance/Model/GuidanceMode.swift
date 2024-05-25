@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum GuidanceMode {
     
@@ -21,12 +22,12 @@ enum GuidanceMode {
         }
     }
     
-    var touchesStrategy: TouchesDelegateStrategy {
+    func touchesStrategy(presenter: UIViewController) -> TouchesDelegateStrategy {
         switch self {
         case .action:
             return ActionModeTouchesDelegateStrategy()
         case .edit:
-            return EditModeTouchesDelegateStrategy()
+            return EditModeTouchesDelegateStrategy(presenter: presenter)
         }
     }
 }

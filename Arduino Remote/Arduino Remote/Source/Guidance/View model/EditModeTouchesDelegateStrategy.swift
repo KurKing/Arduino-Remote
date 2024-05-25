@@ -5,15 +5,25 @@
 //  Created by Oleksii on 14.05.2024.
 //
 
-import Foundation
+import UIKit
 import SpriteKit
 
-class EditModeTouchesDelegateStrategy: TouchesDelegateStrategy {
+protocol EditModeMenuPresenter: UIViewController {
+    
+    func present(menu: UIViewController, position: CGPoint)
+}
+
+class EditModeTouchesDelegateStrategy: NSObject, TouchesDelegateStrategy {
     
     weak var scene: SKScene?
+    private weak var menuPresenter: UIViewController?
     
     private var selectedNode: ButtonNode?
     private var selectedNodeWasEverMoved = false
+    
+    init(presenter: UIViewController) {
+        self.menuPresenter = presenter
+    }
     
     func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -47,7 +57,14 @@ class EditModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         
         if let selectedNode = selectedNode,
            !selectedNodeWasEverMoved {
-            selectedNode.incrementPin()
+            
+            guard let scene = scene,
+                  let menuPresenter = menuPresenter as? EditModeMenuPresenter else { return }
+            
+            let buttonPosition = scene.convertPoint(toView: selectedNode.position)
+                        
+            let menu = ButtonEditViewController()
+            menuPresenter.present(menu: menu, position: buttonPosition)
         }
         
         selectedNode = nil
