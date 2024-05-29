@@ -86,7 +86,7 @@ extension GuidanceViewController: EditModeMenuPresenter {
     func present(menu: UIViewController, position: CGPoint) {
         
         menu.modalPresentationStyle = .popover
-        menu.preferredContentSize = .init(width: 300, height: 300)
+        menu.preferredContentSize = .init(width: 320, height: 160)
         menu.popoverPresentationController?.sourceView = spriteKitView
         menu.popoverPresentationController?.sourceRect = CGRect(origin: position,
                                                                 size: .zero)
