@@ -63,7 +63,7 @@ class EditModeTouchesDelegateStrategy: NSObject, TouchesDelegateStrategy {
             
             let buttonPosition = scene.convertPoint(toView: selectedNode.position)
                         
-            let menu = ButtonEditViewController()
+            let menu = ButtonEditViewController.instantiate()
             menuPresenter.present(menu: menu, position: buttonPosition)
         }
         

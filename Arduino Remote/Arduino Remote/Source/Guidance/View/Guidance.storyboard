@@ -49,20 +49,21 @@
             </objects>
             <point key="canvasLocation" x="851" y="-34"/>
         </scene>
-        <!--View Controller-->
+        <!--Button Edit View Controller-->
         <scene sceneID="MOO-po-c7H">
             <objects>
-                <viewController id="X3K-P4-N8F" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ButtonEditViewController" id="X3K-P4-N8F" customClass="ButtonEditViewController" customModule="Arduino_Remote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cY8-n9-hOP">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="419" height="297"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="SwK-Ou-a9J"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <size key="freeformSize" width="419" height="297"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pSy-0v-4cj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717" y="-28"/>
+            <point key="canvasLocation" x="1634.3511450381679" y="-223.94366197183101"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="q2Q-Rs-Wny">
