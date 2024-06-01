@@ -20,7 +20,9 @@ class IPFetchService: IPFetchServiceProtocol {
     private let disposeBag = DisposeBag()
     
     private var apiManager: ApiManager { resolve(ApiManager.self) }
-    private var localStorageManager: RealmStorageManager { resolve(RealmStorageManager.self) }
+    private var localStorageManager: RealmStorageManager {
+        resolve(RealmStorageManager.self)
+    }
     
     init(router: RouterProtocol = IPInputRouter(),
          viewModel: IPInputViewModelProtocol = IPInputViewModel()) {

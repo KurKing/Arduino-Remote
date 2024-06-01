@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-enum ButtonNodeMode {
+enum ButtonNodeMode: Int {
     
     case oneClick
     case buttonSwitch
@@ -56,7 +56,6 @@ class ButtonNode: SKShapeNode {
     private weak var circle: SKShapeNode?
     private weak var label: SKLabelNode?
     
-    private static var maxPinNumber: Int { 15 }
     var pinNumber = 0 {
         didSet {
             label?.text = "P\(pinNumber)"
@@ -101,15 +100,6 @@ class ButtonNode: SKShapeNode {
                 self.strokeColor = currentColor
             })
         ]))
-    }
-    
-    func incrementPin() {
-        
-        pinNumber += 1
-        
-        if pinNumber > Self.maxPinNumber {
-            pinNumber = 0
-        }
     }
     
     private func moveTime(from start: CGPoint, to finish: CGPoint) -> TimeInterval {

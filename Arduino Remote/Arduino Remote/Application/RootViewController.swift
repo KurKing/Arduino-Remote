@@ -7,33 +7,33 @@
 
 import UIKit
 
+class RootRouter: RouterProtocol {
+    
+    func route(to route: Route, _ context: UIViewController, _ parameter: Any?) {
+        
+        guard route == .schemeList else { fatalError("Unknown root") }
+        
+        let listViewController = SchemesListViewController.instantiate()
+        context.navigationController?.pushViewController(listViewController,
+                                                         animated: true)
+    }
+}
+
 class RootViewController: UIViewController {
     
     private lazy var ipFetcher: IPFetchServiceProtocol? = IPFetchService()
-    private var isInitiated = false
+    private let router: RouterProtocol = RootRouter()
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+         
+        super.viewDidLoad()
         
-        super.viewWillAppear(animated)
-        
-        if !isInitiated {
+        ipFetcher?.fetchIP(context: self) { [weak self] in
             
-            ipFetcher?.fetchIP(context: self) { [weak self] in
-                self?.presentChildViews()
-                self?.ipFetcher = nil
-            }
+            guard let self = self else { return }
             
-            isInitiated = true
-        } else {
-            
-            guard ipFetcher == nil else { return }
-            presentChildViews()
+            self.router.route(to: .schemeList, self)
+            self.ipFetcher = nil
         }
-    }
-    
-    private func presentChildViews() {
-        
-        navigationController?.pushViewController(GuidanceViewController.instantiate(),
-                                                 animated: true)
     }
 }

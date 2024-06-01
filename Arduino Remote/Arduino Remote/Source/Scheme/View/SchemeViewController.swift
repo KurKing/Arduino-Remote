@@ -1,5 +1,5 @@
 //
-//  GuidanceViewController.swift
+//  SchemeViewController.swift
 //  Arduino Remote
 //
 //  Created by Oleksii on 13.05.2024.
@@ -10,36 +10,46 @@ import SpriteKit
 import RxSwift
 import RxCocoa
 
-extension GuidanceViewController {
+extension SchemeViewController {
     
-    class func instantiate() -> GuidanceViewController {
+    class func instantiate(item: SchemesListItem) -> SchemeViewController {
         
-        let storyboard = UIStoryboard(name: "Guidance", bundle: nil)
-        let identifier = "GuidanceViewController"
+        let storyboard = UIStoryboard(name: "Scheme", bundle: nil)
+        let identifier = "SchemeViewController"
         
         let viewController = storyboard
-            .instantiateViewController(withIdentifier: identifier) as! GuidanceViewController
+            .instantiateViewController(withIdentifier: identifier) as! SchemeViewController
         
         viewController.scene = ContollerScene()
+        
+        let viewModel = SchemeViewModel(item: item)
+        viewModel.attach(view: viewController, scene: viewController.scene)
+        
+        viewController.viewModel = viewModel
         
         return viewController
     }
 }
 
-class GuidanceViewController: UIViewController {
+class SchemeViewController: UIViewController {
     
     @IBOutlet weak var spriteKitView: SKView!
     @IBOutlet weak var playButton: UIBarButtonItem!
-    private var scene: ContollerScene!
     
-    private var mode = GuidanceMode.edit
+    private var scene: ContollerScene!
+    private var viewModel: SchemeViewModelProtocol!
+    
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        title = "Scheme"
+        title = viewModel.title
+        viewModel.mode.subscribe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] mode in
+                self?.playButton.image = mode.buttonImage
+            }).disposed(by: disposeBag)
         
         spriteKitView.presentScene(scene)
         
@@ -49,26 +59,21 @@ class GuidanceViewController: UIViewController {
                 self?.scene?.size = rect.size
             }).disposed(by: disposeBag)
         scene.size = spriteKitView.bounds.size
-        
-        setupMode()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        
+        viewModel.viewWillDisappear()
+    }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        
-        mode = mode.inverted
-        
-        setupMode()
-    }
-    
-    private func setupMode() {
-        
-        playButton.image = mode.buttonImage
-        scene.touchesDelegateStrategy = mode.touchesStrategy(presenter: self)
+        viewModel.playButtonPressed()
     }
 }
 
-private extension GuidanceMode {
+private extension SchemeMode {
     
     var buttonImage: UIImage {
         switch self {
@@ -81,7 +86,7 @@ private extension GuidanceMode {
 }
 
 // MARK: Menu presenter
-extension GuidanceViewController: EditModeMenuPresenter {
+extension SchemeViewController: EditModeMenuPresenter {
     
     func present(menu: UIViewController, position: CGPoint) {
         
@@ -97,7 +102,7 @@ extension GuidanceViewController: EditModeMenuPresenter {
     }
 }
 
-extension GuidanceViewController: UIPopoverPresentationControllerDelegate {
+extension SchemeViewController: UIPopoverPresentationControllerDelegate {
     
     func adaptivePresentationStyle(for controller: UIPresentationController, 
                                    traitCollection: UITraitCollection) -> UIModalPresentationStyle {
