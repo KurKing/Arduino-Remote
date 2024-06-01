@@ -258,14 +258,14 @@
 			path = Realm;
 			sourceTree = "<group>";
 		};
-		4938E2582BF29970000BC00E /* Guidance */ = {
+		4938E2582BF29970000BC00E /* Scheme */ = {
 			isa = PBXGroup;
 			children = (
 				49E0DFAE2BF3AC5F002EC1D8 /* Model */,
 				49E0DFB02BF3AC71002EC1D8 /* View */,
 				49E0DFAF2BF3AC64002EC1D8 /* View model */,
 			);
-			path = Guidance;
+			path = Scheme;
 			sourceTree = "<group>";
 		};
 		49D917012BDEA72D00188761 /* Application */ = {
@@ -282,7 +282,7 @@
 			isa = PBXGroup;
 			children = (
 				49D917112BDEDD7B00188761 /* Common */,
-				4938E2582BF29970000BC00E /* Guidance */,
+				4938E2582BF29970000BC00E /* Scheme */,
 				49D917032BDEB43900188761 /* IPFetcher */,
 			);
 			path = Source;

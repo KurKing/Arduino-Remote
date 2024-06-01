@@ -13,7 +13,7 @@ extension ButtonEditViewController {
     
     class func instantiate(selectedMode: ButtonNodeMode, pin: Int) -> ButtonEditViewController {
         
-        let storyboard = UIStoryboard(name: "Guidance", bundle: nil)
+        let storyboard = UIStoryboard(name: "Scheme", bundle: nil)
         let identifier = "ButtonEditViewController"
         
         let viewContoller = storyboard.instantiateViewController(withIdentifier: identifier)
