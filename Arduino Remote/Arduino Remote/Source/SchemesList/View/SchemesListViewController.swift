@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import RxSwift
 
 extension SchemesListViewController {
     
@@ -16,6 +17,8 @@ extension SchemesListViewController {
         
         let viewController = storyboard
             .instantiateViewController(withIdentifier: identifier) as! SchemesListViewController
+        
+        viewController.viewModel = SchemesListViewModel()
                 
         return viewController
     }
@@ -25,7 +28,8 @@ class SchemesListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var items = 0
+    private var viewModel: SchemesListViewModelProtocol!
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         
@@ -36,6 +40,12 @@ class SchemesListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alwaysBounceVertical = false
+        
+        viewModel.items
+            .subscribe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] _ in
+                self?.tableView.reloadData()
+            }).disposed(by: disposeBag)
     }
 }
 
@@ -43,9 +53,12 @@ class SchemesListViewController: UIViewController {
 extension SchemesListViewController {
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        
-        items += 1
-        tableView?.reloadData()
+        viewModel.addItem()
+    }
+    
+    private func onSelect(item: SchemesListItem) {
+        navigationController?.pushViewController(SchemeViewController.instantiate(),
+                                                 animated: true)
     }
 }
 
@@ -53,17 +66,21 @@ extension SchemesListViewController {
 extension SchemesListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        items
+        viewModel.items.value.count
     }
     
     func tableView(_ tableView: UITableView, 
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        guard let item = viewModel.items.value[safe: indexPath.row] else {
+            return UITableViewCell()
+        }
+        
         let identifier = "SchemeListItemTableViewCell"
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, 
                                                  for: indexPath) as! SchemeListItemTableViewCell
         
-        cell.setup(with: "Item #\(indexPath.row)")
+        cell.setup(with: item)
         
         return cell
     }
@@ -77,8 +94,8 @@ extension SchemesListViewController: UITableViewDelegate {
         
         tableView.deselectRow(at: indexPath, animated: false)
         
-        navigationController?.pushViewController(SchemeViewController.instantiate(),
-                                                 animated: true)
+        guard let item = viewModel.items.value[safe: indexPath.row] else { return }
+        onSelect(item: item)
     }
     
     func tableView(_ tableView: UITableView, 

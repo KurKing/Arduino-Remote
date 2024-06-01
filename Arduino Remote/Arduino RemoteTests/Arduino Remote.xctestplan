@@ -1,0 +1,36 @@
+{
+  "configurations" : [
+    {
+      "id" : "68466EE6-5D7C-4314-B7A0-9D301FE90412",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:Arduino Remote.xcodeproj",
+      "identifier" : "491AD2832BD6EF0800B0890E",
+      "name" : "Arduino Remote"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Arduino Remote.xcodeproj",
+        "identifier" : "491AD2992BD6EF0900B0890E",
+        "name" : "Arduino RemoteTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Arduino Remote.xcodeproj",
+        "identifier" : "491AD2A32BD6EF0900B0890E",
+        "name" : "Arduino RemoteUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
