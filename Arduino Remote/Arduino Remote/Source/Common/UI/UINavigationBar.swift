@@ -11,12 +11,19 @@ extension UINavigationBar {
     
     class func setupDefaultAppearance() {
         
-        UINavigationBar.appearance().tintColor = .mediumSkyBlue
+        let navigationBarAppearance = UINavigationBarAppearance()
+        navigationBarAppearance.configureWithOpaqueBackground()
         
         let font = UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
-        UINavigationBar.appearance().titleTextAttributes = [
+        navigationBarAppearance.titleTextAttributes = [
             NSAttributedString.Key.font: font,
             NSAttributedString.Key.foregroundColor: UIColor.mediumSkyBlue
         ]
+        navigationBarAppearance.backgroundColor = .darkMidnightBlue
+        
+        UINavigationBar.appearance().tintColor = .mediumSkyBlue
+        UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+        UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+        UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
     }
 }
