@@ -32,7 +32,7 @@ class GuidanceViewController: UIViewController {
     @IBOutlet weak var playButton: UIBarButtonItem!
     private var scene: ContollerScene!
     
-    private var mode = GuidanceMode.edit
+    private var mode = SchemeMode.edit
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -68,7 +68,7 @@ class GuidanceViewController: UIViewController {
     }
 }
 
-private extension GuidanceMode {
+private extension SchemeMode {
     
     var buttonImage: UIImage {
         switch self {

@@ -1,5 +1,5 @@
 //
-//  GuidanceMode.swift
+//  SchemeMode.swift
 //  Arduino Remote
 //
 //  Created by Oleksii on 14.05.2024.
@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-enum GuidanceMode {
+enum SchemeMode {
     
     case edit
     case action
     
-    var inverted: GuidanceMode {
+    var inverted: SchemeMode {
         switch self {
         case .action:
             return .edit

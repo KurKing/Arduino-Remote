@@ -33,7 +33,7 @@ class RootViewController: UIViewController {
     
     private func presentChildViews() {
         
-        navigationController?.pushViewController(GuidanceViewController.instantiate(),
+        navigationController?.pushViewController(SchemeViewController.instantiate(),
                                                  animated: true)
     }
 }

@@ -34,8 +34,8 @@
 		4938E2532BF26132000BC00E /* SVProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2522BF26132000BC00E /* SVProgressHUD */; };
 		4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2542BF26159000BC00E /* LoadingIndicator.swift */; };
 		4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2562BF269C9000BC00E /* IPInputModel.swift */; };
-		4938E25E2BF29A8E000BC00E /* GuidanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */; };
-		4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938E25F2BF29ABC000BC00E /* Guidance.storyboard */; };
+		4938E25E2BF29A8E000BC00E /* SchemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E25D2BF29A8E000BC00E /* SchemeViewController.swift */; };
+		4938E2602BF29ABC000BC00E /* Scheme.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4938E25F2BF29ABC000BC00E /* Scheme.storyboard */; };
 		4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 4938E2652BF38EE5000BC00E /* ContollerScene.sks */; };
 		4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2672BF38EF2000BC00E /* ContollerScene.swift */; };
 		4938E28F2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */; };
@@ -53,7 +53,7 @@
 		49E0DFA72BF3A5D3002EC1D8 /* RealmSwift in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2482BF235B6000BC00E /* RealmSwift */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		49E0DFA92BF3A5D5002EC1D8 /* Hopoate in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 4938E2352BF13EAD000BC00E /* Hopoate */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		49E0DFB22BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */; };
-		49E0DFB42BF3AD6F002EC1D8 /* GuidanceMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */; };
+		49E0DFB42BF3AD6F002EC1D8 /* SchemeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49E0DFB32BF3AD6F002EC1D8 /* SchemeMode.swift */; };
 		742F973F0902360B47D49559 /* libPods-Arduino RemoteTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F7B97065A290957462ED81D6 /* libPods-Arduino RemoteTests.a */; };
 /* End PBXBuildFile section */
 
@@ -113,8 +113,8 @@
 		4938E24F2BF23F39000BC00E /* StoredIpAddressConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoredIpAddressConfig.swift; sourceTree = "<group>"; };
 		4938E2542BF26159000BC00E /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
 		4938E2562BF269C9000BC00E /* IPInputModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IPInputModel.swift; sourceTree = "<group>"; };
-		4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceViewController.swift; sourceTree = "<group>"; };
-		4938E25F2BF29ABC000BC00E /* Guidance.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Guidance.storyboard; sourceTree = "<group>"; };
+		4938E25D2BF29A8E000BC00E /* SchemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeViewController.swift; sourceTree = "<group>"; };
+		4938E25F2BF29ABC000BC00E /* Scheme.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scheme.storyboard; sourceTree = "<group>"; };
 		4938E2652BF38EE5000BC00E /* ContollerScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = ContollerScene.sks; sourceTree = "<group>"; };
 		4938E2672BF38EF2000BC00E /* ContollerScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContollerScene.swift; sourceTree = "<group>"; };
 		4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 		49D917132BDEDD9000188761 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		49D917152BDEE54000188761 /* IPInputView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = IPInputView.storyboard; sourceTree = "<group>"; };
 		49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModeTouchesDelegateStrategy.swift; sourceTree = "<group>"; };
-		49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidanceMode.swift; sourceTree = "<group>"; };
+		49E0DFB32BF3AD6F002EC1D8 /* SchemeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeMode.swift; sourceTree = "<group>"; };
 		63ACE826165F6744BE8E533F /* Pods-Arduino Remote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote/Pods-Arduino Remote.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF6539A5203BB4B63ED03F5 /* Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteUITests/Pods-Arduino Remote-Arduino RemoteUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F61E85275789546A0FFA4E2 /* Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino Remote-Arduino RemoteTests/Pods-Arduino Remote-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -344,7 +344,7 @@
 		49E0DFAE2BF3AC5F002EC1D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				49E0DFB32BF3AD6F002EC1D8 /* GuidanceMode.swift */,
+				49E0DFB32BF3AD6F002EC1D8 /* SchemeMode.swift */,
 				49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */,
 			);
 			path = Model;
@@ -363,8 +363,8 @@
 			isa = PBXGroup;
 			children = (
 				49E0DFAD2BF3AC56002EC1D8 /* Scene */,
-				4938E25D2BF29A8E000BC00E /* GuidanceViewController.swift */,
-				4938E25F2BF29ABC000BC00E /* Guidance.storyboard */,
+				4938E25D2BF29A8E000BC00E /* SchemeViewController.swift */,
+				4938E25F2BF29ABC000BC00E /* Scheme.storyboard */,
 				490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */,
 			);
 			path = View;
@@ -525,7 +525,7 @@
 				491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */,
 				4938E2662BF38EE5000BC00E /* ContollerScene.sks in Resources */,
 				49D917162BDEE54000188761 /* IPInputView.storyboard in Resources */,
-				4938E2602BF29ABC000BC00E /* Guidance.storyboard in Resources */,
+				4938E2602BF29ABC000BC00E /* Scheme.storyboard in Resources */,
 				491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -692,12 +692,12 @@
 				4938E23F2BF2321E000BC00E /* RealmLocalStorageManager.swift in Sources */,
 				49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */,
 				4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */,
-				49E0DFB42BF3AD6F002EC1D8 /* GuidanceMode.swift in Sources */,
+				49E0DFB42BF3AD6F002EC1D8 /* SchemeMode.swift in Sources */,
 				4938E2572BF269C9000BC00E /* IPInputModel.swift in Sources */,
 				4938E2682BF38EF2000BC00E /* ContollerScene.swift in Sources */,
 				49D9170C2BDEDD5100188761 /* IPInputViewModel.swift in Sources */,
 				49755ADF2BF8EA4A0032AA1D /* UINavigationBar.swift in Sources */,
-				4938E25E2BF29A8E000BC00E /* GuidanceViewController.swift in Sources */,
+				4938E25E2BF29A8E000BC00E /* SchemeViewController.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
