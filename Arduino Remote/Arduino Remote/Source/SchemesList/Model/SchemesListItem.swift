@@ -12,6 +12,8 @@ class SchemesListItem {
     let id: String
     let title: String
     
+    var buttons = [ButtonModel]()
+    
     init(id: String, title: String) {
         self.id = id
         self.title = title

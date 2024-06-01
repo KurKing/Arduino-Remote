@@ -73,7 +73,11 @@ class SchemeViewModel: SchemeViewModelProtocol {
 private extension SchemeViewModel {
     
     func saveButtonsLocally() {
-        // TODO: Save
+
+        item.buttons = (scene?.children ?? [])
+            .compactMap({ $0 as? ButtonNode })
+            .map({ ButtonModel(node: $0) })
+        
         model.save(item: item)
     }
 }

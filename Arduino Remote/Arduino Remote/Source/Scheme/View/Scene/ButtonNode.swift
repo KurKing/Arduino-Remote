@@ -8,7 +8,7 @@
 import Foundation
 import SpriteKit
 
-enum ButtonNodeMode {
+enum ButtonNodeMode: Int {
     
     case oneClick
     case buttonSwitch
