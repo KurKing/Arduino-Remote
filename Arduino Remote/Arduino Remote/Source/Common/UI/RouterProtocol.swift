@@ -12,6 +12,8 @@ enum Route {
     case back
     case ipInput
     case fakeLaunchScreen
+    case schemeList
+    case scheme
 }
 
 protocol RouterProtocol {

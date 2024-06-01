@@ -48,6 +48,7 @@
 		4995AFB72C0B8FAD00B4F368 /* SchemesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFB62C0B8FAD00B4F368 /* SchemesListViewModel.swift */; };
 		4995AFB92C0B900B00B4F368 /* SchemesListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFB82C0B900B00B4F368 /* SchemesListItem.swift */; };
 		4995AFBB2C0B93DE00B4F368 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFBA2C0B93DE00B4F368 /* Collection+Extension.swift */; };
+		4995AFBE2C0B96A600B4F368 /* SchemeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFBD2C0B96A600B4F368 /* SchemeListRouter.swift */; };
 		49B6DF372BFBAF15008CFED2 /* ActionModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
@@ -133,6 +134,7 @@
 		4995AFB62C0B8FAD00B4F368 /* SchemesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemesListViewModel.swift; sourceTree = "<group>"; };
 		4995AFB82C0B900B00B4F368 /* SchemesListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemesListItem.swift; sourceTree = "<group>"; };
 		4995AFBA2C0B93DE00B4F368 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		4995AFBD2C0B96A600B4F368 /* SchemeListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeListRouter.swift; sourceTree = "<group>"; };
 		49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModeModel.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 				4995AFB42C0B8EB100B4F368 /* Model */,
 				4995AFB32C0B8EA400B4F368 /* View */,
 				4995AFB52C0B8EB600B4F368 /* ViewModel */,
+				4995AFBC2C0B969300B4F368 /* Router */,
 			);
 			path = SchemesList;
 			sourceTree = "<group>";
@@ -315,6 +318,14 @@
 				4995AFB62C0B8FAD00B4F368 /* SchemesListViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4995AFBC2C0B969300B4F368 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				4995AFBD2C0B96A600B4F368 /* SchemeListRouter.swift */,
+			);
+			path = Router;
 			sourceTree = "<group>";
 		};
 		49D917012BDEA72D00188761 /* Application */ = {
@@ -755,6 +766,7 @@
 				4995AFB72C0B8FAD00B4F368 /* SchemesListViewModel.swift in Sources */,
 				4938E25E2BF29A8E000BC00E /* SchemeViewController.swift in Sources */,
 				491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */,
+				4995AFBE2C0B96A600B4F368 /* SchemeListRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,7 +12,7 @@ import RxCocoa
 
 extension SchemeViewController {
     
-    class func instantiate() -> SchemeViewController {
+    class func instantiate(item: SchemesListItem) -> SchemeViewController {
         
         let storyboard = UIStoryboard(name: "Scheme", bundle: nil)
         let identifier = "SchemeViewController"
@@ -21,6 +21,7 @@ extension SchemeViewController {
             .instantiateViewController(withIdentifier: identifier) as! SchemeViewController
         
         viewController.scene = ContollerScene()
+        viewController.item = item
         
         return viewController
     }
@@ -32,6 +33,7 @@ class SchemeViewController: UIViewController {
     @IBOutlet weak var playButton: UIBarButtonItem!
     private var scene: ContollerScene!
     
+    private var item: SchemesListItem!
     private var mode = SchemeMode.edit
     private let disposeBag = DisposeBag()
     
@@ -39,7 +41,7 @@ class SchemeViewController: UIViewController {
         
         super.viewDidLoad()
         
-        title = "Scheme"
+        title = item.title
         
         spriteKitView.presentScene(scene)
         

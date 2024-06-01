@@ -19,6 +19,7 @@ extension SchemesListViewController {
             .instantiateViewController(withIdentifier: identifier) as! SchemesListViewController
         
         viewController.viewModel = SchemesListViewModel()
+        viewController.router = SchemeListRouter()
                 
         return viewController
     }
@@ -29,6 +30,8 @@ class SchemesListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var viewModel: SchemesListViewModelProtocol!
+    private var router: RouterProtocol!
+    
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
@@ -56,9 +59,11 @@ extension SchemesListViewController {
         viewModel.addItem()
     }
     
-    private func onSelect(item: SchemesListItem) {
-        navigationController?.pushViewController(SchemeViewController.instantiate(),
-                                                 animated: true)
+    private func onSelect(index: Int) {
+        
+        guard let item = viewModel.items.value[safe: index] else { return }
+        
+        router.route(to: .scheme, self, item)
     }
 }
 
@@ -93,9 +98,7 @@ extension SchemesListViewController: UITableViewDelegate {
                    didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: false)
-        
-        guard let item = viewModel.items.value[safe: indexPath.row] else { return }
-        onSelect(item: item)
+        onSelect(index: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, 
