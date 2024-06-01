@@ -14,7 +14,7 @@ protocol SchemesListViewModelProtocol {
     var items: BehaviorRelay<[SchemesListItem]> { get }
     
     func viewWillAppear()
-    func addItem()
+    func addItem(with title: String)
 }
 
 class SchemesListViewModel: SchemesListViewModelProtocol {
@@ -36,11 +36,11 @@ class SchemesListViewModel: SchemesListViewModelProtocol {
             }).disposed(by: disposeBag)
     }
     
-    func addItem() {
+    func addItem(with title: String) {
         
         var value = items.value
         value.append(.init(id: UUID().uuidString, 
-                           title: "Item #\(Int.random(in: 0...10))"))
+                           title: title))
         items.accept(value)
     }
 }

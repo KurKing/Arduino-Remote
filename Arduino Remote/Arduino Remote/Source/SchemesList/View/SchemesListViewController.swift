@@ -63,7 +63,11 @@ class SchemesListViewController: UIViewController {
 extension SchemesListViewController {
     
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
-        viewModel.addItem()
+        
+        presentRequestNameAlert { [weak self] name in
+            
+            self?.viewModel.addItem(with: name)
+        }
     }
     
     private func onSelect(index: Int) {
@@ -71,6 +75,43 @@ extension SchemesListViewController {
         guard let item = viewModel.items.value[safe: index] else { return }
         
         router.route(to: .scheme, self, item)
+    }
+}
+
+// MARK: - Alerts
+extension SchemesListViewController {
+    
+    private func presentRequestNameAlert(with completion: ((String)->())?) {
+        
+        let alertController = UIAlertController(title: "Enter Scheme Name",
+                                                message: nil,
+                                                preferredStyle: .alert)
+        
+        alertController.addTextField { textField in
+            textField.placeholder = "Scheme Name"
+            textField.font = UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+        }
+        
+        let okAction = UIAlertAction(title: "OK",
+                                     style: .default) { [weak self] _ in
+            
+            let name = alertController.textFields?.first?.text.map({ $0.trimmed }) ?? ""
+            
+            if name.isEmpty {
+                
+                self?.presentRequestNameAlert(with: completion)
+                return
+            }
+            
+            completion?(name)
+        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
     }
 }
 
