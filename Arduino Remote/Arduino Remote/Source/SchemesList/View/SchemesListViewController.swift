@@ -153,4 +153,21 @@ extension SchemesListViewController: UITableViewDelegate {
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         50
     }
+    
+    func tableView(_ tableView: UITableView,
+                   trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let deleteAction =
+        UIContextualAction(style: .destructive,
+                           title: "Delete") { [weak self] (_, _, completionHandler) in
+            
+            self?.viewModel.removeItem(with: indexPath.row)
+            completionHandler(true)
+        }
+        deleteAction.backgroundColor = .red
+        
+        let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+        configuration.performsFirstActionWithFullSwipe = true
+        return configuration
+    }
 }

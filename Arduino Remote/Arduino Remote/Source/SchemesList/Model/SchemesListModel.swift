@@ -9,7 +9,9 @@ import Foundation
 import RxSwift
 
 protocol SchemesListModelProtocol {
+    
     func loadItems() -> Observable<[SchemesListItem]>
+    func delete(item: SchemesListItem)
 }
 
 class SchemesListModel: SchemesListModelProtocol {
@@ -41,6 +43,20 @@ class SchemesListModel: SchemesListModelProtocol {
             }
             
             return Disposables.create()
+        }
+    }
+    
+    func delete(item: SchemesListItem) {
+        
+        localStorageManager.read { realm in
+            
+            guard let itemToDelete = realm.object(ofType: ItemRealmModel.self,
+                                                  forPrimaryKey: item.id) else { return }
+            try? realm.write({
+                
+                itemToDelete.buttons.forEach({ realm.delete($0) })
+                realm.delete(itemToDelete)
+            })
         }
     }
 }

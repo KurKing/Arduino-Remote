@@ -15,6 +15,7 @@ protocol SchemesListViewModelProtocol {
     
     func viewWillAppear()
     func addItem(with title: String)
+    func removeItem(with index: Int)
 }
 
 class SchemesListViewModel: SchemesListViewModelProtocol {
@@ -41,6 +42,16 @@ class SchemesListViewModel: SchemesListViewModelProtocol {
         var value = items.value
         value.append(.init(id: UUID().uuidString, 
                            title: title))
+        items.accept(value)
+    }
+    
+    func removeItem(with index: Int) {
+        
+        var value = items.value
+        
+        model.delete(item: value[index])
+        value.remove(at: index)
+        
         items.accept(value)
     }
 }
