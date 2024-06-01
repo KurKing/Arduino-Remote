@@ -7,6 +7,8 @@
 
 import UIKit
 import SpriteKit
+import RxSwift
+import RxRelay
 
 protocol EditModeMenuPresenter: UIViewController {
     
@@ -20,6 +22,8 @@ class EditModeTouchesDelegateStrategy: NSObject, TouchesDelegateStrategy {
     
     private var selectedNode: ButtonNode?
     private var selectedNodeWasEverMoved = false
+    
+    private let disposeBag = DisposeBag()
     
     init(presenter: UIViewController) {
         self.menuPresenter = presenter
@@ -63,7 +67,25 @@ class EditModeTouchesDelegateStrategy: NSObject, TouchesDelegateStrategy {
             
             let buttonPosition = scene.convertPoint(toView: selectedNode.position)
                         
-            let menu = ButtonEditViewController()
+            let menu = ButtonEditViewController.instantiate(selectedMode: selectedNode.mode,
+                                                            pin: selectedNode.pinNumber)
+            menu.deleteEvent.subscribe(onNext: { [weak menu] in
+                
+                menu?.dismiss(animated: true, completion: { [weak self, weak selectedNode] in
+                    
+                    selectedNode?.removeFromParent()
+                    self?.selectedNode = nil
+                })
+            }).disposed(by: disposeBag)
+            
+            menu.selectedMode.subscribe(onNext: { [weak selectedNode] mode in
+                selectedNode?.mode = mode
+            }).disposed(by: disposeBag)
+            
+            menu.selectedPin.subscribe(onNext: { [weak selectedNode] pin in
+                selectedNode?.pinNumber = pin
+            }).disposed(by: disposeBag)
+            
             menuPresenter.present(menu: menu, position: buttonPosition)
         }
         

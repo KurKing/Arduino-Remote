@@ -10,8 +10,27 @@ import SpriteKit
 
 enum ButtonNodeMode {
     
-    case buttonSwitch
     case oneClick
+    case buttonSwitch
+    
+    static func mode(for index: Int) -> ButtonNodeMode {
+        
+        switch index {
+        case 1:
+            return .buttonSwitch
+        default:
+            return .oneClick
+        }
+    }
+    
+    var intIndex: Int {
+        switch self {
+        case .oneClick:
+            0
+        case .buttonSwitch:
+            1
+        }
+    }
 }
 
 extension ButtonNode {
@@ -45,7 +64,7 @@ class ButtonNode: SKShapeNode {
     }
     
     var isOn = false
-    var mode = ButtonNodeMode.buttonSwitch
+    var mode = ButtonNodeMode.oneClick
     
     override var strokeColor: UIColor {
         get { super.strokeColor }
