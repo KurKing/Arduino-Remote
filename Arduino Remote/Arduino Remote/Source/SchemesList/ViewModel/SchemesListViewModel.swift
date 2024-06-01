@@ -17,7 +17,7 @@ protocol SchemesListViewModelProtocol {
 
 class SchemesListViewModel: SchemesListViewModelProtocol {
     
-    let items: BehaviorRelay<[SchemesListItem]> = BehaviorRelay(value: [])
+    let items: BehaviorRelay<[SchemesListItem]> = .init(value: [])
     
     func addItem() {
         

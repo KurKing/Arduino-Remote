@@ -21,13 +21,4 @@ enum SchemeMode {
             return .action
         }
     }
-    
-    func touchesStrategy(presenter: UIViewController) -> TouchesDelegateStrategy {
-        switch self {
-        case .action:
-            return ActionModeTouchesDelegateStrategy()
-        case .edit:
-            return EditModeTouchesDelegateStrategy(presenter: presenter)
-        }
-    }
 }

@@ -48,6 +48,8 @@ class ActionModeTouchesDelegateStrategy: TouchesDelegateStrategy {
         if button.mode == .oneClick {
             
             button.isOn = false
+            button.blynkAnimation()
+
             model.sendLedRequest(pin: button.pinNumber, isOn: false)
         } else {
             

@@ -21,7 +21,11 @@ extension SchemeViewController {
             .instantiateViewController(withIdentifier: identifier) as! SchemeViewController
         
         viewController.scene = ContollerScene()
-        viewController.item = item
+        
+        let viewModel = SchemeViewModel(item: item)
+        viewModel.attach(view: viewController, scene: viewController.scene)
+        
+        viewController.viewModel = viewModel
         
         return viewController
     }
@@ -31,17 +35,21 @@ class SchemeViewController: UIViewController {
     
     @IBOutlet weak var spriteKitView: SKView!
     @IBOutlet weak var playButton: UIBarButtonItem!
-    private var scene: ContollerScene!
     
-    private var item: SchemesListItem!
-    private var mode = SchemeMode.edit
+    private var scene: ContollerScene!
+    private var viewModel: SchemeViewModelProtocol!
+    
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
         
-        title = item.title
+        title = viewModel.title
+        viewModel.mode.subscribe(on: MainScheduler.asyncInstance)
+            .subscribe(onNext: { [weak self] mode in
+                self?.playButton.image = mode.buttonImage
+            }).disposed(by: disposeBag)
         
         spriteKitView.presentScene(scene)
         
@@ -51,22 +59,17 @@ class SchemeViewController: UIViewController {
                 self?.scene?.size = rect.size
             }).disposed(by: disposeBag)
         scene.size = spriteKitView.bounds.size
-        
-        setupMode()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        
+        super.viewDidDisappear(animated)
+        
+        viewModel.viewDidDisappear()
+    }
     
     @IBAction func playButtonTapped(_ sender: Any) {
-        
-        mode = mode.inverted
-        
-        setupMode()
-    }
-    
-    private func setupMode() {
-        
-        playButton.image = mode.buttonImage
-        scene.touchesDelegateStrategy = mode.touchesStrategy(presenter: self)
+        viewModel.playButtonPressed()
     }
 }
 

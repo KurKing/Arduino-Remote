@@ -49,6 +49,9 @@
 		4995AFB92C0B900B00B4F368 /* SchemesListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFB82C0B900B00B4F368 /* SchemesListItem.swift */; };
 		4995AFBB2C0B93DE00B4F368 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFBA2C0B93DE00B4F368 /* Collection+Extension.swift */; };
 		4995AFBE2C0B96A600B4F368 /* SchemeListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFBD2C0B96A600B4F368 /* SchemeListRouter.swift */; };
+		4995AFC02C0B9A6800B4F368 /* ButtonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFBF2C0B9A6800B4F368 /* ButtonModel.swift */; };
+		4995AFC22C0BA80200B4F368 /* SchemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC12C0BA80200B4F368 /* SchemeViewModel.swift */; };
+		4995AFC42C0BA9FC00B4F368 /* SchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC32C0BA9FC00B4F368 /* SchemeModel.swift */; };
 		49B6DF372BFBAF15008CFED2 /* ActionModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
@@ -135,6 +138,9 @@
 		4995AFB82C0B900B00B4F368 /* SchemesListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemesListItem.swift; sourceTree = "<group>"; };
 		4995AFBA2C0B93DE00B4F368 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		4995AFBD2C0B96A600B4F368 /* SchemeListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeListRouter.swift; sourceTree = "<group>"; };
+		4995AFBF2C0B9A6800B4F368 /* ButtonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonModel.swift; sourceTree = "<group>"; };
+		4995AFC12C0BA80200B4F368 /* SchemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeViewModel.swift; sourceTree = "<group>"; };
+		4995AFC32C0BA9FC00B4F368 /* SchemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModel.swift; sourceTree = "<group>"; };
 		49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModeModel.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -407,6 +413,8 @@
 			children = (
 				49E0DFB32BF3AD6F002EC1D8 /* SchemeMode.swift */,
 				49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */,
+				4995AFBF2C0B9A6800B4F368 /* ButtonModel.swift */,
+				4995AFC32C0BA9FC00B4F368 /* SchemeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -416,6 +424,7 @@
 			children = (
 				49E0DFB12BF3ACB5002EC1D8 /* ActionModeTouchesDelegateStrategy.swift */,
 				4938E28E2BF39AB8000BC00E /* EditModeTouchesDelegateStrategy.swift */,
+				4995AFC12C0BA80200B4F368 /* SchemeViewModel.swift */,
 			);
 			path = "View model";
 			sourceTree = "<group>";
@@ -734,13 +743,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				49755ADB2BF7836E0032AA1D /* MockApiManager.swift in Sources */,
+				4995AFC42C0BA9FC00B4F368 /* SchemeModel.swift in Sources */,
 				4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */,
 				4938E2502BF23F39000BC00E /* StoredIpAddressConfig.swift in Sources */,
 				4995AFB92C0B900B00B4F368 /* SchemesListItem.swift in Sources */,
 				49755ADD2BF7B72B0032AA1D /* ButtonNode.swift in Sources */,
 				49D917142BDEDD9000188761 /* RouterProtocol.swift in Sources */,
 				49D917102BDEDD7100188761 /* IPInputRouter.swift in Sources */,
+				4995AFC02C0B9A6800B4F368 /* ButtonModel.swift in Sources */,
 				490551432C0220FD00A3EF29 /* ButtonEditViewController.swift in Sources */,
+				4995AFC22C0BA80200B4F368 /* SchemeViewModel.swift in Sources */,
 				4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */,
 				49D917082BDEB49300188761 /* ApiManager.swift in Sources */,
 				4938E2392BF13F75000BC00E /* Hopoate.swift in Sources */,
