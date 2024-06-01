@@ -34,8 +34,7 @@ class EncryptedRealmStorageManager: RealmStorageManager {
                           keySize: .init(bitCount: 512))
             .withUnsafeBytes { Data(Array($0)) }
         
-//        config = Realm.Configuration(encryptionKey: key)
-        config = .defaultConfiguration
+        config = Realm.Configuration(encryptionKey: key)
     }
     
     private var realmInstance: Realm {
