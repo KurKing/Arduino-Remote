@@ -10,30 +10,20 @@ import UIKit
 class RootViewController: UIViewController {
     
     private lazy var ipFetcher: IPFetchServiceProtocol? = IPFetchService()
-    private var isInitiated = false
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidLoad() {
+         
+        super.viewDidLoad()
         
-        super.viewWillAppear(animated)
-        
-        if !isInitiated {
-            
-            ipFetcher?.fetchIP(context: self) { [weak self] in
-                self?.presentChildViews()
-                self?.ipFetcher = nil
-            }
-            
-            isInitiated = true
-        } else {
-            
-            guard ipFetcher == nil else { return }
-            presentChildViews()
+        ipFetcher?.fetchIP(context: self) { [weak self] in
+            self?.presentChildViews()
+            self?.ipFetcher = nil
         }
     }
     
     private func presentChildViews() {
         
-        navigationController?.pushViewController(SchemeViewController.instantiate(),
+        navigationController?.pushViewController(SchemesListViewController.instantiate(),
                                                  animated: true)
     }
 }
