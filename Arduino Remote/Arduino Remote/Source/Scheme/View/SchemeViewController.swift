@@ -61,11 +61,11 @@ class SchemeViewController: UIViewController {
         scene.size = spriteKitView.bounds.size
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         
-        super.viewDidDisappear(animated)
+        super.viewWillDisappear(animated)
         
-        viewModel.viewDidDisappear()
+        viewModel.viewWillDisappear()
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {

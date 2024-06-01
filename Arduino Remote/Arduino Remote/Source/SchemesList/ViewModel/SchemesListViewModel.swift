@@ -12,12 +12,29 @@ import RxRelay
 protocol SchemesListViewModelProtocol {
     
     var items: BehaviorRelay<[SchemesListItem]> { get }
+    
+    func viewWillAppear()
     func addItem()
 }
 
 class SchemesListViewModel: SchemesListViewModelProtocol {
     
     let items: BehaviorRelay<[SchemesListItem]> = .init(value: [])
+    
+    private let model: SchemesListModelProtocol
+    private let disposeBag = DisposeBag()
+    
+    init(model: SchemesListModelProtocol = SchemesListModel()) {
+        self.model = model
+    }
+    
+    func viewWillAppear() {
+        
+        model.loadItems()
+            .subscribe(onNext: { [weak self] items in
+                self?.items.accept(items)
+            }).disposed(by: disposeBag)
+    }
     
     func addItem() {
         

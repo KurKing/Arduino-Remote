@@ -19,4 +19,12 @@ class ButtonModel {
         position = node.position
         mode = node.mode
     }
+    
+    init(realmObject: ButtonRealmModel) {
+        
+        pin = realmObject.pin
+        mode = .init(rawValue: realmObject.modeIndex) ?? .oneClick
+        position = .init(x: realmObject.x,
+                         y: realmObject.y)
+    }
 }

@@ -53,6 +53,7 @@
 		4995AFC22C0BA80200B4F368 /* SchemeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC12C0BA80200B4F368 /* SchemeViewModel.swift */; };
 		4995AFC42C0BA9FC00B4F368 /* SchemeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC32C0BA9FC00B4F368 /* SchemeModel.swift */; };
 		4995AFC62C0BB68E00B4F368 /* SchemeItemRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC52C0BB68E00B4F368 /* SchemeItemRealm.swift */; };
+		4995AFC82C0BB70100B4F368 /* SchemesListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4995AFC72C0BB70100B4F368 /* SchemesListModel.swift */; };
 		49B6DF372BFBAF15008CFED2 /* ActionModeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */; };
 		49CE768A2BEBCBFE00F50236 /* UIViewController + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */; };
 		49D917082BDEB49300188761 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D917072BDEB49300188761 /* ApiManager.swift */; };
@@ -143,6 +144,7 @@
 		4995AFC12C0BA80200B4F368 /* SchemeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeViewModel.swift; sourceTree = "<group>"; };
 		4995AFC32C0BA9FC00B4F368 /* SchemeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeModel.swift; sourceTree = "<group>"; };
 		4995AFC52C0BB68E00B4F368 /* SchemeItemRealm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemeItemRealm.swift; sourceTree = "<group>"; };
+		4995AFC72C0BB70100B4F368 /* SchemesListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchemesListModel.swift; sourceTree = "<group>"; };
 		49B6DF362BFBAF15008CFED2 /* ActionModeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionModeModel.swift; sourceTree = "<group>"; };
 		49CE76892BEBCBFE00F50236 /* UIViewController + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Extension.swift"; sourceTree = "<group>"; };
 		49D917072BDEB49300188761 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -317,6 +319,7 @@
 			isa = PBXGroup;
 			children = (
 				4995AFB82C0B900B00B4F368 /* SchemesListItem.swift */,
+				4995AFC72C0BB70100B4F368 /* SchemesListModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -745,6 +748,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4995AFC82C0BB70100B4F368 /* SchemesListModel.swift in Sources */,
 				49755ADB2BF7836E0032AA1D /* MockApiManager.swift in Sources */,
 				4995AFC42C0BA9FC00B4F368 /* SchemeModel.swift in Sources */,
 				4938E2552BF26159000BC00E /* LoadingIndicator.swift in Sources */,

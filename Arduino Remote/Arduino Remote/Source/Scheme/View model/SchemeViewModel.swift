@@ -14,7 +14,7 @@ protocol SchemeViewModelProtocol {
     var mode: BehaviorRelay<SchemeMode> { get }
     var title: String { get }
     
-    func viewDidDisappear()
+    func viewWillDisappear()
     func playButtonPressed()
 }
 
@@ -40,6 +40,19 @@ class SchemeViewModel: SchemeViewModelProtocol {
         self.scene = scene
         
         scene.touchesDelegateStrategy = EditModeTouchesDelegateStrategy(presenter: view)
+        
+        item.buttons
+            .map({ item in
+                    
+                let node: ButtonNode = .instantiate(location: item.position)
+                node.pinNumber = item.pin
+                node.mode = item.mode
+                
+                return node
+            }).forEach ({ [weak self] button in
+                
+                self?.scene?.addChild(button)
+            })
     }
     
     func playButtonPressed() {
@@ -64,7 +77,7 @@ class SchemeViewModel: SchemeViewModelProtocol {
         self.mode.accept(mode)
     }
     
-    func viewDidDisappear() {
+    func viewWillDisappear() {
         saveButtonsLocally()
     }
 }
