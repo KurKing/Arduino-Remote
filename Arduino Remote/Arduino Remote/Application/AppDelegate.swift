@@ -11,12 +11,16 @@ import Hopoate
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    func application(_ application: UIApplication, 
+    func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions
                      launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        register(AlamofireApiManager(), for: ApiManager.self)
-//        register(MockApiManager(), for: ApiManager.self)
+        if ProcessInfo.processInfo.arguments.contains("--uitesting") {
+            register(MockApiManager(), for: ApiManager.self)
+        } else {
+            register(AlamofireApiManager(), for: ApiManager.self)
+        }
+        
         register(EncryptedRealmStorageManager(), for: RealmStorageManager.self)
         register(SVProgressHUDLoadingIndicator(), for: LoadingIndicator.self)
         

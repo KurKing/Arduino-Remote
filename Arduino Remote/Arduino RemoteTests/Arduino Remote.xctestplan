@@ -24,7 +24,6 @@
       }
     },
     {
-      "parallelizable" : true,
       "target" : {
         "containerPath" : "container:Arduino Remote.xcodeproj",
         "identifier" : "491AD2A32BD6EF0900B0890E",
