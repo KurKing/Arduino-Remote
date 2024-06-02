@@ -10,12 +10,12 @@
 		1A9E1549EB5F58B922760B27 /* libPods-Arduino Remote.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EDE26F7D0D037EC81B97AC42 /* libPods-Arduino Remote.a */; };
 		437D3ED115B7C0A93460BAE7 /* libPods-Arduino Remote-Arduino RemoteUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9811C8602BA27882939EF4A8 /* libPods-Arduino Remote-Arduino RemoteUITests.a */; };
 		4904CACD2C0C564F00597EA8 /* RegexTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904CACC2C0C564F00597EA8 /* RegexTests.swift */; };
+		4904CACF2C0C58D400597EA8 /* CollectionSafeSubscriptTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4904CACE2C0C58D400597EA8 /* CollectionSafeSubscriptTest.swift */; };
 		490551432C0220FD00A3EF29 /* ButtonEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */; };
 		491AD2882BD6EF0800B0890E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2872BD6EF0800B0890E /* AppDelegate.swift */; };
 		491AD28A2BD6EF0800B0890E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2892BD6EF0800B0890E /* SceneDelegate.swift */; };
 		491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2902BD6EF0900B0890E /* Assets.xcassets */; };
 		491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */; };
-		491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */; };
 		491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */; };
 		491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */; };
 		4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2272BEBEBFA000BC00E /* UIView + Extension.swift */; };
@@ -105,6 +105,7 @@
 /* Begin PBXFileReference section */
 		0EFDE57497376E3467390B17 /* Pods-Arduino RemoteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Arduino RemoteTests.release.xcconfig"; path = "Target Support Files/Pods-Arduino RemoteTests/Pods-Arduino RemoteTests.release.xcconfig"; sourceTree = "<group>"; };
 		4904CACC2C0C564F00597EA8 /* RegexTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexTests.swift; sourceTree = "<group>"; };
+		4904CACE2C0C58D400597EA8 /* CollectionSafeSubscriptTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionSafeSubscriptTest.swift; sourceTree = "<group>"; };
 		490551422C0220FD00A3EF29 /* ButtonEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEditViewController.swift; sourceTree = "<group>"; };
 		491AD2842BD6EF0800B0890E /* Arduino Remote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Arduino Remote.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2872BD6EF0800B0890E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -113,7 +114,6 @@
 		491AD2932BD6EF0900B0890E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		491AD2952BD6EF0900B0890E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		491AD29A2BD6EF0900B0890E /* Arduino RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteTests.swift; sourceTree = "<group>"; };
 		491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITests.swift; sourceTree = "<group>"; };
 		491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -241,8 +241,8 @@
 		491AD29D2BD6EF0900B0890E /* Arduino RemoteTests */ = {
 			isa = PBXGroup;
 			children = (
-				491AD29E2BD6EF0900B0890E /* Arduino_RemoteTests.swift */,
 				4904CACC2C0C564F00597EA8 /* RegexTests.swift */,
+				4904CACE2C0C58D400597EA8 /* CollectionSafeSubscriptTest.swift */,
 			);
 			path = "Arduino RemoteTests";
 			sourceTree = "<group>";
@@ -797,7 +797,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				491AD29F2BD6EF0900B0890E /* Arduino_RemoteTests.swift in Sources */,
+				4904CACF2C0C58D400597EA8 /* CollectionSafeSubscriptTest.swift in Sources */,
 				4904CACD2C0C564F00597EA8 /* RegexTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
