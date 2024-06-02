@@ -43,6 +43,8 @@ class SchemesListViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.alwaysBounceVertical = false
+        tableView.isAccessibilityElement = true
+        tableView.accessibilityIdentifier = "schemes-list-table"
         
         viewModel.items
             .subscribe(on: MainScheduler.asyncInstance)
@@ -90,6 +92,7 @@ extension SchemesListViewController {
         alertController.addTextField { textField in
             textField.placeholder = "Scheme Name"
             textField.font = UIFont(name: "HelveticaNeue-Bold", size: 18.0)!
+            textField.accessibilityIdentifier = "enter-name-text-field"
         }
         
         let okAction = UIAlertAction(title: "OK",
@@ -105,6 +108,7 @@ extension SchemesListViewController {
             
             completion?(name)
         }
+        okAction.accessibilityIdentifier = "enter-name-ok-button"
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         
@@ -134,6 +138,7 @@ extension SchemesListViewController: UITableViewDataSource {
                                                  for: indexPath) as! SchemeListItemTableViewCell
         
         cell.setup(with: item)
+        cell.accessibilityIdentifier = "scheme-list-item-\(indexPath.row)"
         
         return cell
     }

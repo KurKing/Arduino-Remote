@@ -48,7 +48,10 @@ class SchemeViewController: UIViewController {
         title = viewModel.title
         viewModel.mode.subscribe(on: MainScheduler.asyncInstance)
             .subscribe(onNext: { [weak self] mode in
+                
                 self?.playButton.image = mode.buttonImage
+                self?.playButton.isAccessibilityElement = true
+                self?.playButton.accessibilityIdentifier = "play-scheme-button"
             }).disposed(by: disposeBag)
         
         spriteKitView.presentScene(scene)

@@ -19,6 +19,7 @@ class SchemeListItemTableViewCell: UITableViewCell {
         
         item = nil
         nameLabel.text = ""
+        accessibilityIdentifier = "scheme-list-item-none"
     }
     
     func setup(with item: SchemesListItem) {
