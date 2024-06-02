@@ -18,7 +18,6 @@
 		491AD2912BD6EF0900B0890E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2902BD6EF0900B0890E /* Assets.xcassets */; };
 		491AD2942BD6EF0900B0890E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 491AD2922BD6EF0900B0890E /* LaunchScreen.storyboard */; };
 		491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */; };
-		491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */; };
 		4938E2282BEBEBFA000BC00E /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2272BEBEBFA000BC00E /* UIView + Extension.swift */; };
 		4938E22D2BEBF485000BC00E /* String + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E22C2BEBF485000BC00E /* String + Extension.swift */; };
 		4938E2312BEC0DA3000BC00E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4938E2302BEC0DA3000BC00E /* RootViewController.swift */; };
@@ -89,6 +88,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4904CAD82C0C61B100597EA8 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		49E0DFA82BF3A5D3002EC1D8 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,7 +127,6 @@
 		491AD29A2BD6EF0900B0890E /* Arduino RemoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Arduino RemoteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITests.swift; sourceTree = "<group>"; };
-		491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Arduino_RemoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		4938E2272BEBEBFA000BC00E /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		4938E22C2BEBF485000BC00E /* String + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String + Extension.swift"; sourceTree = "<group>"; };
 		4938E2302BEC0DA3000BC00E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -254,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				491AD2A82BD6EF0900B0890E /* Arduino_RemoteUITests.swift */,
-				491AD2AA2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift */,
 			);
 			path = "Arduino RemoteUITests";
 			sourceTree = "<group>";
@@ -538,6 +545,7 @@
 				491AD2A12BD6EF0900B0890E /* Frameworks */,
 				491AD2A22BD6EF0900B0890E /* Resources */,
 				9F1D468B641DEB387D179B67 /* [CP] Copy Pods Resources */,
+				4904CAD82C0C61B100597EA8 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -545,6 +553,8 @@
 				491AD2A62BD6EF0900B0890E /* PBXTargetDependency */,
 			);
 			name = "Arduino RemoteUITests";
+			packageProductDependencies = (
+			);
 			productName = "Arduino RemoteUITests";
 			productReference = 491AD2A42BD6EF0900B0890E /* Arduino RemoteUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
@@ -811,7 +821,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				491AD2A92BD6EF0900B0890E /* Arduino_RemoteUITests.swift in Sources */,
-				491AD2AB2BD6EF0900B0890E /* Arduino_RemoteUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
